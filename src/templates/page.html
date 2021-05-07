@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <script src="./livecode_options.js"></script>
+
+    <link rel="stylesheet" href="{{ LIVECODE_BASE_URL }}/static/codemirror/lib/codemirror.css">
+
+    <script src="{{ LIVECODE_BASE_URL }}/static/codemirror/lib/codemirror.js"></script>
+    <script src="{{ LIVECODE_BASE_URL }}/static/codemirror/mode/python/python.js"></script>
+    <script src="{{ LIVECODE_BASE_URL }}/static/codemirror/keymap/sublime.js"></script>
+
+    <script src="{{ LIVECODE_BASE_URL }}/static/codemirror/addon/edit/matchbrackets.js"></script>
+    <script src="{{ LIVECODE_BASE_URL }}/static/codemirror/addon/comment/comment.js"></script>
+
+    <script src="./sketch.js"></script>
+
+    <style type="text/css">
+        .CodeMirror {
+            border: 1px solid #ddd;
+            background: #ffe;
+            height: auto;
+        }
+        .CodeMirror-scroll {
+            max-height: 300px;
+        }
+        .controls {
+            padding: 10px 0px;
+        }
+        canvas {
+          border: 1px solid #eee;
+          width: 200px;
+          height: 200px;
+        }
+    </style>
+
+    <title>{{title}} | The Joy of Programming</title>
+  </head>
+  <body>
+    <div class="container">
+        {{page}}
+    </div>
+
+    <template id="livecode-template">
+      <div class="livecode-editor">
+        <div class="code-editor">
+          <div class="controls"><button class="run">Run</button></div></div>
+          <div class="code-wrapper">
+            <textarea class="code"></textarea>
+          </div>
+          <div class="canvas-wrapper">
+            <canvas width="300" height="300">
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="{{ LIVECODE_BASE_URL }}/static/livecode.js"></script>
+
+    <script type="text/javascript">
+        $(function() {
+          var editorLookup = {};
+
+          $("pre").each((i, e) => {
+            var code = $(e).text();
+
+            var template = document.querySelector('#livecode-template');
+            var clone = template.content.cloneNode(true);
+
+            $(e)
+            .wrap('<div></div>')
+            .hide()
+            .parent()
+            .append(clone)
+            .find("textarea.code")
+            .val(code);
+
+            var editor = new LiveCodeEditor(e.parentElement, {
+              ...LIVECODE_OPTIONS,
+              codemirror: true,
+              onMessage: {
+                draw: function(editor, msg) {
+                  console.log(msg);
+                  const canvasElement = editor.parent.querySelector("canvas");
+                  drawOnCanvas(canvasElement, msg.function, msg.args);
+                }
+              }
+            });
+          });
+        });
+    </script>
+  </body>
+</html>
