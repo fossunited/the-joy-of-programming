@@ -2,6 +2,7 @@
 .PHONY: build
 build:
 	python src/build.py
+	mkdocs build
 
-serve: build
-	python3 -m http.server --directory build/
+serve:
+	mkdocs serve

@@ -1,0 +1,20 @@
+site_name: The Joy of Programming
+docs_dir: course
+theme:
+  name: material
+  custom_dir: overrides
+
+extra_css:
+  - assets/codemirror/lib/codemirror.css
+  - assets/style.css
+
+extra_javascript:
+  - assets/codemirror/lib/codemirror.js
+  - assets/codemirror/mode/python/python.js
+  - assets/codemirror/keymap/sublime.js
+  - assets/codemirror/addon/edit/matchbrackets.js
+  - assets/codemirror/addon/comment/comment.js
+  - https://code.jquery.com/jquery-3.6.0.min.js
+  - https://livecode.fossunited.org/static/livecode.js
+  - assets/sketch.js
+  - assets/livecode-options.js

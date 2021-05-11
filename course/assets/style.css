@@ -1,0 +1,64 @@
+.CodeMirror {
+    border: 1px solid #ddd;
+    background: #ffe;
+    height: auto;
+}
+.CodeMirror-scroll {
+    max-height: 300px;
+    min-height: 200px;
+}
+.controls {
+    padding: 10px 0px;
+}
+canvas {
+  border: 5px solid #eee;
+  width: 200px;
+  height: 200px;
+}
+.code-wrapper {
+    min-height: 200px;
+}
+
+.clearfix {
+  clear: both;
+}
+.livecode-editor {
+  margin: 20px 0px;
+  clear: both;
+}
+.code-editor {
+  display: flex;
+  flex-direction: row;
+}
+
+.code-wrapper {
+    min-width: 300px;
+    flex: 1;
+}
+.canvas-wrapper {
+    width: 200px;
+    padding-left: 10px;
+}
+
+button {
+  cursor: pointer;
+  background: #eee;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+}
+
+@media (max-width: 600px) {
+  .code-editor {
+      display: block;
+  }
+  .canvas-wrapper {
+    padding-top: 10px;
+    padding-left: 0px;
+  }
+  .code-wrapper {
+    min-height: 50px;
+  }
+  .CodeMirror {
+    min-height: 50px;
+  }
+}
