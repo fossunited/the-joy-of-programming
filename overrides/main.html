@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+  {{ super() }}
+
+  <template id="livecode-template">
+    <div class="livecode-editor">
+      <div class="controls"><button class="run">Run</button></div>
+      <div class="code-editor">
+        <div class="code-wrapper">
+          <textarea class="code"></textarea>
+        </div>
+        <div class="canvas-wrapper">
+          <canvas width="300" height="300"></canvas>
+          <pre class="output"></pre>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script type="text/javascript">
+    $(function() {
+      var editorLookup = {};
+
+      $("pre").each((i, e) => {
+        var code = $(e).text();
+
+        var template = document.querySelector('#livecode-template');
+        var clone = template.content.cloneNode(true);
+
+        $(e)
+        .wrap('<div></div>')
+        .hide()
+        .parent()
+        .append(clone)
+        .find("textarea.code")
+        .val(code);
+
+        var editor = new LiveCodeEditor(e.parentElement, {
+          ...LIVECODE_OPTIONS,
+          codemirror: true,
+          onMessage: {
+            draw: function(editor, msg) {
+              console.log(msg);
+              const canvasElement = editor.parent.querySelector("canvas");
+              drawOnCanvas(canvasElement, msg.function, msg.args);
+            }
+          }
+        });
+      });
+    });
+</script>
+
+{% endblock %}

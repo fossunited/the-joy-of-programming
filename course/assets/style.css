@@ -62,3 +62,53 @@ button {
     min-height: 50px;
   }
 }
+
+.hidden {
+  /* display: none; */
+}
+
+.hline {
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  border-top: 1px dotted red;
+  width: 200px
+}
+
+.vline {
+  position: absolute;
+  top: 0px;
+  left: 100px;
+  height: 200px;
+  border-left: 1px dotted blue;
+}
+
+.tooltip {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 5px;
+  overflow: visible;
+  width: 200px;
+}
+
+
+canvas {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 210px;
+  height: 210px;
+  cursor: crosshair;
+}
+
+.canvas-wrapper {
+  position: relative;
+}
+
+.output {
+  overflow-x: auto;
+  width: 200px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

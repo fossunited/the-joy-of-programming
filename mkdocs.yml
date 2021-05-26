@@ -4,6 +4,9 @@ theme:
   name: material
   custom_dir: overrides
 
+nav:
+    - The Joy of Programming: index.md
+
 extra_css:
   - assets/codemirror/lib/codemirror.css
   - assets/style.css
