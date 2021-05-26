@@ -43,7 +43,7 @@ Don't worry
 
 ## What is happening?
 
-<img src="images/circle.png">
+![](assets/images/circle.png)
 
 Let's look at the program again:
 
