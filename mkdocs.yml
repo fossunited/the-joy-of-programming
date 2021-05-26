@@ -1,4 +1,7 @@
 site_name: The Joy of Programming
+repo_url: https://github.com/fossunited/the-joy-of-programming
+site_author: FOSS United
+
 docs_dir: course
 theme:
   name: material
