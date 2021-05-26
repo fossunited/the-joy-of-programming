@@ -3,9 +3,6 @@
 from pathlib import Path
 import json
 import argparse
-import markdown
-import glob
-from jinja2 import Environment, FileSystemLoader
 
 START = Path(__file__).parent.joinpath("start.py").read_text()
 SKETCH = Path(__file__).parent.joinpath("sketch.py").read_text()
@@ -22,10 +19,6 @@ LIVECODE_OPTIONS = {
     ],
     "command": ["python", "start.py"]
 }
-
-env = Environment(loader=FileSystemLoader("src/templates"))
-env.globals['LIVECODE_BASE_URL'] = LIVECODE_BASE_URL
-render = env.get_template("page.html").render
 
 def parse_args():
     p = argparse.ArgumentParser()
