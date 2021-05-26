@@ -10,8 +10,8 @@ from jinja2 import Environment, FileSystemLoader
 START = Path(__file__).parent.joinpath("start.py").read_text()
 SKETCH = Path(__file__).parent.joinpath("sketch.py").read_text()
 
-LIVECODE_BASE_URL = "https://livecode.fossunited.org"
-#LIVECODE_BASE_URL = "http://localhost:8010"
+# LIVECODE_BASE_URL = "https://livecode.fossunited.org"
+LIVECODE_BASE_URL = "http://localhost:8010"
 
 LIVECODE_OPTIONS = {
     "base_url": LIVECODE_BASE_URL,
@@ -41,23 +41,12 @@ def build_js(root):
     jscode = "var LIVECODE_OPTIONS = {};".format(json.dumps(LIVECODE_OPTIONS))
     write_file(root, "livecode-options.js", jscode)
 
-def build_md(root, filename):
-    md = open(filename).read()
-    page = markdown.markdown(md, extensions=['fenced_code'])
-
-    out_filename = filename.replace(".md", ".html")
-    title = filename.replace(".md", "").replace("_", " ").title()
-    write_file(root, out_filename, render(page=page, title=title))
-
 def main():
     root = Path("course/assets")
     root.mkdir(exist_ok=True)
     build_js(root)
 
     write_file(root, "sketch.js", open("src/sketch.js").read())
-
-    # for filename in glob.glob("*.md"):
-    #     build_md(root, filename)
 
 if __name__ == "__main__":
     main()
