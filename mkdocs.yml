@@ -6,6 +6,9 @@ theme:
 
 nav:
     - The Joy of Programming: index.md
+    - Introduction to Programming: introduction.md
+    - Drawing Shapes: drawing-shapes.md
+    - The Elements of Programming: the-elements-of-programming.md
 
 extra_css:
   - assets/codemirror/lib/codemirror.css
