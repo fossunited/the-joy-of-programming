@@ -1,0 +1,10 @@
+answer: |-
+  s1 = Circle(radius=50)
+  s2 = Ellipse(width=200, height=100)
+  show(s1, s2)
+code: '# your code here
+
+  '
+description: Draw an eye as shown in the figure. Can you guess what are the dimensions?
+name: the-eye-jp
+title: The Eye

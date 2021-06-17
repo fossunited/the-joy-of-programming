@@ -1,0 +1,22 @@
+answer: |-
+  size = 100
+
+  # create the donut
+  p = Point(x=100, y=100)
+  d = Circle(center=p, radius=size/2) + Circle(center=p, radius=size/4)
+
+  # show it
+  show(d)
+code: |
+  size = 100
+
+  # create the donut
+
+  # show it
+description: |
+  Draw an draw donut with `(100, 100)` as the center, as shown in the figure
+  below. The program has a variable `size` indicating the width and height
+  of the resulting shape. Please use the variable `size` to compute the
+  size of each circle drawn for the donut.
+name: donut-again-jp
+title: Donut Again

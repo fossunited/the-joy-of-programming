@@ -1,0 +1,31 @@
+answer: |-
+  # create the circle
+  c = Circle(radius=100)
+
+  # identify the four points
+  p1 = Point(x=0, y=100)
+  p2 = Point(x=100, y=0)
+  p3 = Point(x=0, y=-100)
+  p4 = Point(x=-100, y=0)
+
+  # create four lines
+  z1 = Line(start=p1, end=p2)
+  z2 = Line(start=p2, end=p3)
+  z3 = Line(start=p3, end=p4)
+  z4 = Line(start=p4, end=p1)
+
+  # show them
+  show(c, z1, z2, z3, z4)
+code: |-
+  # create the circle
+  c = Circle(radius=100)
+
+  # identify the four points
+
+  # create four lines
+
+  # show them
+description: "Draw a square in a circle as shown in the figure below. You'll have\
+  \ to \nidentify the four corners of the square and connect them using lines.\n\n"
+name: square-in-a-circle-jp
+title: Square in a Circle

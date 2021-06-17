@@ -1,0 +1,9 @@
+answer: |-
+  s1 = Rectangle(width=200, height=200)
+  s2 = Rectangle(width=100, height=100)
+  show(s1, s2)
+code: '# your code here'
+description: Draw two concentric squares around the origin with length 200 and 100
+  respectively.
+name: two-concentric-squares-jp
+title: Two Concentric Squares

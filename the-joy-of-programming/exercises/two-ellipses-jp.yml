@@ -1,0 +1,16 @@
+answer: |-
+  s1 = Ellipse(width=200, height=100)
+  s2 = Ellipse(width=100, height=200)
+  show(s1, s2)
+code: |-
+  # the first ellipse
+  s1 = Ellipse(width=200, height=100)
+
+  # create second ellipse
+
+
+  # change this to show both the shapes
+  show(s1)
+description: Draw two ellipses as shown in the figure.
+name: two-ellipses-jp
+title: Two Ellipses

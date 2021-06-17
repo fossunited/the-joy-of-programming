@@ -1,0 +1,10 @@
+answer: |-
+  s = Rectangle(width=200, height=200)
+
+  show(s)
+code: '# your code here'
+description: 'Draw a square of length 200 using Rectangle.
+
+  '
+name: draw-a-square-jp
+title: Draw a Square

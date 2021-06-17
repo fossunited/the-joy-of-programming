@@ -1,0 +1,19 @@
+answer: |-
+  width = 200
+
+  # create shape eye
+  eye = Ellipse(width=width, height=width/2) + Circle(radius=width/4)
+
+  # show the shape eye
+  show(eye)
+code: |-
+  width = 200
+
+  # create shape eye
+
+  # show the shape eye
+  show(eye)
+description: Draw an eye as shown in the figure below. Determine size of each shape
+  using the variable `width`, which specifies the width of combined shape.
+name: eye-with-variables-jp
+title: Eye With Variables

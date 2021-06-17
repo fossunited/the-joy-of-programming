@@ -1,0 +1,17 @@
+answer: |-
+  s1 = Rectangle(width=200, height=100)
+  s2 = Rectangle(width=100, height=200)
+  show(s1, s2)
+code: |-
+  # the first rectangle
+  r1 = Rectangle(width=200, height=100)
+
+  # create second rectangle r2
+
+
+  # change this to show both the shapes
+  show(r1)
+description: Draw two rectangles as shown in the figure. Both the rectangles have
+  sides as 100 and 200.
+name: two-rectangles-jp
+title: Two Rectangles
