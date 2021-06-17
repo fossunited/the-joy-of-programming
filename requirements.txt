@@ -1,0 +1,3 @@
+mkdocs-material
+git+git://github.com/fossunited/markdown-macros#egg=markdown-macros
+git+https://github.com/frappe/frappe-client#egg=frappeclient

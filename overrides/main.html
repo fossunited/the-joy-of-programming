@@ -11,12 +11,32 @@
           <textarea class="code"></textarea>
         </div>
         <div class="canvas-wrapper">
-          <canvas width="300" height="300"></canvas>
+          <div class="svg-image" width="300" height="300"></div>
           <pre class="output"></pre>
         </div>
       </div>
     </div>
   </template>
+
+  <template id="exercise-template">
+    <div class="livecode-editor">
+      <div class="controls">
+        <button class="run">Run</button>
+        <button class="reset">Reset</button>
+        <button class="answer">Show Answer</button>
+      </div>
+      <div class="code-editor">
+        <div class="code-wrapper">
+          <textarea class="code"></textarea>
+        </div>
+        <div class="canvas-wrapper">
+          <div class="svg-image" width="300" height="300"></div>
+          <pre class="output"></pre>
+        </div>
+      </div>
+    </div>
+  </template>
+
 
   <script type="text/javascript">
     $(function() {
@@ -40,15 +60,60 @@
           ...LIVECODE_OPTIONS,
           codemirror: true,
           onMessage: {
-            draw: function(editor, msg) {
+            image: function(editor, msg) {
               console.log(msg);
-              const canvasElement = editor.parent.querySelector("canvas");
-              drawOnCanvas(canvasElement, msg.function, msg.args);
+              const canvasElement = editor.parent.querySelector(".svg-image");
+              canvasElement.innerHTML = msg.image;
             }
           }
         });
       });
+
+      $("div.exercise").each((i, e) => {
+        var code = $(e).data("code");
+        var answer = $(e).data("answer");
+        var image = $(e).data("image");
+
+        code = JSON.parse(code);
+        answer = JSON.parse(answer);
+        image = JSON.parse(image);
+
+        var template = document.querySelector('#exercise-template');
+        var clone = template.content.cloneNode(true);
+
+        $(e)
+        .append(clone)
+        .find("textarea.code")
+        .val(code);
+
+        $("<div></div>")
+        .insertBefore(e)
+        .addClass("svg-exercise-image")
+        .html(image);
+
+        var editor = new LiveCodeEditor(e, {
+          ...LIVECODE_OPTIONS,
+          codemirror: true,
+          onMessage: {
+            image: function(editor, msg) {
+              console.log(msg);
+              const canvasElement = editor.parent.querySelector(".svg-image");
+              canvasElement.innerHTML = msg.image;
+            }
+          }
+        });
+
+        $(e).find(".reset").on("click", function() {
+          editor.codemirror.doc.setValue(code);
+        });
+
+        $(e).find(".answer").on("click", function() {
+          editor.codemirror.doc.setValue(answer);
+        });
+
+      });
     });
+
 </script>
 
 {% endblock %}

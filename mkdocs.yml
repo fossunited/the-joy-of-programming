@@ -2,16 +2,47 @@ site_name: The Joy of Programming
 repo_url: https://github.com/fossunited/the-joy-of-programming
 site_author: FOSS United
 
-docs_dir: course
+docs_dir: the-joy-of-programming
 theme:
   name: material
   custom_dir: overrides
 
 nav:
-    - The Joy of Programming: index.md
-    - Introduction to Programming: introduction.md
-    - Drawing Shapes: drawing-shapes.md
-    - The Elements of Programming: the-elements-of-programming.md
+  - Drawing Shapes:
+    - drawing-shapes-jp/drawing-simple-shapes-jp.md
+    - drawing-shapes-jp/the-coordinates-jp.md
+
+# nav:
+#   - The Joy of Programming: index.md
+#   - Getting Started:
+#     - getting-started/overview.md
+#     - getting-started/platform.md
+#   - Drawing Shapes:
+#     - drawing-shapes/basic-shapes.md
+#     - drawing-shapes/the-coordinates.md
+#   - Composing New Shapes:
+#     - composing-new-shapes/combining-shapes.md
+#     - composing-new-shapes/creating-new-shapes.md
+#   - Transformations:
+#     - transformations/transforming-shapes.md
+#     - transformations/repetition.md
+#   - Randomness:
+#     - randomness/random.md
+#     - randomness/generative-art.md
+#   - Next Steps:
+#     - next-steps/next-steps.md
+
+# markdown_extensions:
+#   - fenced_code
+#   - macros
+markdown_extensions:
+    - toc:
+        permalink: True
+        separator: "_"
+    - macros:
+        registry:
+          Exercise: exercise_macro:exercise_macro
+
 
 extra_css:
   - assets/codemirror/lib/codemirror.css
