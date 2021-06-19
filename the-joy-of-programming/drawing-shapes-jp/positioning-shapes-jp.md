@@ -1,31 +1,32 @@
 # Positioning Shapes
 
+We've seen how to draw circles of different sizes. However, the circles were always centered at the origin.
 
-We've seen how to draw different shapes and working with points and lines in the previous lessons. In this lesson we are going to focus on how to specify position of a shape on the canvas.
+In this lesson we are going to focus on how to specify the center of the circle to position it at different places on the canvas.
 
-Most of the the shapes support specifying the center point when creating the shape. By default, the center is the origin, but we can specify a different point.
+## The Canvas
 
-```{.python .joy .example #two-circles-in-a-row}
-p1 = Point(x=0, y=0)
-c1 = Circle(center=p1, radius=50)
+When we write a program to show some shapes, those shapes are displayed in a small box and that is called the canvas. It is of size 300x300 pixels and the point (0, 0) is at the center of the canvas.
 
-p2 = Point(x=100, y=0)
-c2 = Circle(center=p2, radius=50)
+You may be wondering what is _pixels_. Just like we measure length of physical objects in centimeters and inches, we measure things shown on the screen in pixels. Pixels are the dots that make up the screen. Our canvas is a square with 300 pixels length.
 
-show(c1, c2)
+TODO: place canvas image
+
+## Positining the Circle
+
+We can specify the center of the circle using the `x` and `y` parameters.
+
+```{.joy .example}
+c = circle(x=50, y=0)
+show(c)
 ```
 
-In the above example, we have drawn a circle with (0, 0) as the center and another circle with (100, 0) as the circle.
+Let us try to draw two circles next to each other.
 
-We can specify the center for Ellipse and Rectangle as well.
-
-```{.python .joy .example #rect-with-center}
-p = Point(x=0, y=50)
-
-s1 = Rectangle(center=p, width=200, height=100)
-s2 = Ellipse(center=p, width=200, height=100)
-
-show(s1, s2)
+```{.joy .example}
+c1 = circle(x=-50, y=0, r=50)
+c2 = circle(x=50, y=0, r=50)
+show(c1, c2)
 ```
 
 Wasn't that simple? Let's try some exercises now.
@@ -34,4 +35,5 @@ Wasn't that simple? Let's try some exercises now.
 {{ Exercise("three-circles-in-a-column-jp") }}
 {{ Exercise("grid-of-circles-jp") }}
 {{ Exercise("four-circles-jp") }}
-
+{{ Exercise("three-bottom-circles-jp") }}
+{{ Exercise("three-bottom-circles-large-jp") }}

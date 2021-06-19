@@ -1,22 +1,14 @@
 answer: |2-
-
-  # identify the four points
-  p1 = Point(x=50, y=0)
-  p2 = Point(x=0, y=50)
-  p3 = Point(x=-50, y=0)
-  p4 = Point(x=0, y=-50)
-
-  # create four lines
-  c1 = Circle(center=p1, radius=50)
-  c2 = Circle(center=p2, radius=50)
-  c3 = Circle(center=p3, radius=50)
-  c4 = Circle(center=p4, radius=50)
+  c1 = circle(x=50, y=0, r=50)
+  c2 = circle(x=-50, y=0, r=50)
+  c3 = circle(x=0, y=50, r=50)
+  c4 = circle(x=0, y=-50, r=50)
 
   # show them
   show(c1, c2, c3, c4)
-code: '# your code here
+code: |
+  # your code here
 
-  '
 description: Draw four circles as shows in the figure below.
 name: four-circles-jp
 title: Four Circles

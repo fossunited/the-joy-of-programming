@@ -1,10 +1,10 @@
 answer: |-
-  s1 = Rectangle(width=200, height=100)
-  s2 = Rectangle(width=100, height=200)
-  show(s1, s2)
+  r1 = rectangle(w=200, h=100)
+  r2 = rectangle(w=100, h=200)
+  show(r1, r2)
 code: |-
   # the first rectangle
-  r1 = Rectangle(width=200, height=100)
+  r1 = rectangle(w=200, h=100)
 
   # create second rectangle r2
 

@@ -1,0 +1,22 @@
+answer: |-
+  bright_vermilion = "#AE1C28"
+  white = "#FFFFFF"
+  cobalt_blue = "#21468B"
+
+
+  r1 = rectangle(x=0, y=100, w=300, h=100, stroke="none", fill=bright_vermilion)
+  r2 = rectangle(x=0, y=0, w=300, h=100, stroke="none", fill=white)
+  r3 = rectangle(x=0, y=-100, w=300, h=100, stroke="none", fill=cobalt_blue)
+  show(r1, r2, r3)
+code: |
+  # your code here
+description: |
+  Draw [the flag of the Netherlands][1].
+
+  It is made of three colors _Bright vermilion_, _White_ and
+  _Cobalt Blue_. You find the details of all the color in the [wikipedia page for the flag][1].
+
+  [1]: https://en.wikipedia.org/wiki/Flag_of_the_Netherlands#Description
+
+name: flag-of-the-netherlands-jp
+title: The Flag of the Netherlands

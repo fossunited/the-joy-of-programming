@@ -1,0 +1,17 @@
+answer: |-
+  c1 = circle(x=0, y=-100, r=50)
+  c2 = circle(x=0, y=-50, r=100)
+  c3 = circle(x=0, y=0, r=150)
+
+  # show the circles
+  show(c1, c2, c3)
+code: |
+  # create the three circles
+
+  # show the circles
+description: >
+  Draw three circles with bottom point of each circle touching at the
+  bottom most point of the canvas. The three circles will have
+  radius of 50, 100 and 150 respectively.
+name: three-bottom-circles-large-jp
+title: Three Large Circles touching at the Bottom

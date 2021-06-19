@@ -1,6 +1,6 @@
 answer: |-
-  s1 = Circle(radius=50)
-  s2 = Ellipse(width=200, height=100)
+  s1 = circle(r=50)
+  s2 = ellipse(w=200, h=100)
   show(s1, s2)
 code: '# your code here
 

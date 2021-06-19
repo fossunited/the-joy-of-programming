@@ -1,21 +1,21 @@
 answer: |-
   # create the center circle
-  c1 = Circle(radius=50)
+  c1 = circle(x=0, y=0, r=50)
 
-  # create the left and right circles
-  c2 = Circle(center=Point(x=0, y=100), radius=50)
-  c3 = Circle(center=Point(x=0, y=-100), radius=50)
+  # create the top and the bottom circles
+  c2 = circle(x=0, y=-100, r=50)
+  c3 = circle(x=0, y=100, r=50)
 
   # show the circles
   show(c1, c2, c3)
 code: |
   # create the center circle
-  c1 = Circle(radius=50)
+  c1 = circle(x=0, y=0, r=50)
 
-  # create the left and right circles
+  # create the top and the bottom
 
 
   # show the circles
-description: 'Draw three circles in a column as shown in the figure. '
+description: 'Draw three circles in a column as shown in the figure.'
 name: three-circles-in-a-column-jp
 title: Three Circles in a Column

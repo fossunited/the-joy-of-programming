@@ -1,16 +1,21 @@
 answer: |-
-  c1 = Circle(radius=50)
-  c2 = Circle(radius=100)
-  c3 = Circle(radius=150)
+  # create the first circle
+  c1 = circle(r=50)
+
+  # create the the remaining two circles
+  c2 = circle(r=100)
+  c3 = circle(r=150)
+
+  # show all of them
   show(c1, c2, c3)
 code: |
   # create the first circle
-  c1 = Circle(radius=50)
+  c1 = circle(r=50)
 
   # create the the remaining two circles
 
 
   # show all of them
-description: Draw three concentric circles with radius 50, 100 and 150.
+description: Draw three concentric circles with radius 50, 100 and 150 respectively.
 name: three-concentric-circles-jp
 title: Three Concentric Circles

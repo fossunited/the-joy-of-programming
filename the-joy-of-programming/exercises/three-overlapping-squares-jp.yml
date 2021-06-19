@@ -1,0 +1,14 @@
+answer: |-
+  s1 = rectangle(x=-50, y=-50, w=100, h=100, fill="green", stroke="none")
+  s2 = rectangle(x=0, y=0, w=100, h=100, fill="red", stroke="none")
+  s3 = rectangle(x=50, y=50, w=100, h=100, fill="blue", stroke="none")
+  show(s1, s2, s3)
+code: |
+  # your code here
+description: |
+  Draw three overlapping squares as shown in the figure below.
+
+  Please note that the square do not have a border.
+
+name: three-overlapping-squares-jp
+title: Three Overlapping Squares

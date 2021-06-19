@@ -1,0 +1,20 @@
+answer: |-
+  r1 = rectangle(x=-100, y=0, w=100, h=300, stroke="none", fill="#008C45")
+  r2 = rectangle(x=0, y=0, w=100, h=300, stroke="none", fill="#F4F5F0")
+  r3 = rectangle(x=100, y=0, w=100, h=300, stroke="none", fill="#CD212A")
+  show(r1, r2, r3)
+code: |
+  # your code here
+description: |
+  Draw [the flag of Italy](https://en.wikipedia.org/wiki/Flag_of_Italy).
+
+  It is made of three colors [Fren Green][1], [Bright White][2] and
+  [Flame Scarlet][3]. You find the details of each color by clicking each color
+  name.
+
+  [1]: https://www.pantone.com/color-finder/17-6153-TCX
+  [2]: https://www.pantone.com/color-finder/11-0601-TCX
+  [3]: https://www.pantone.com/color-finder/18-1662-TCX
+
+name: flag-of-italy-jp
+title: The Flag of Italy

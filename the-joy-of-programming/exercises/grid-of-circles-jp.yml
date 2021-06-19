@@ -1,18 +1,17 @@
 answer: |-
   # create the center circle
-  c1 = Circle(center=Point(x=50, y=50), radius=50)
+  c1 = circle(x=50, y=50, r=50)
 
   # create the remaining three circles
-  c2 = Circle(center=Point(x=-50, y=50), radius=50)
-  c3 = Circle(center=Point(x=50, y=-50), radius=50)
-  c4 = Circle(center=Point(x=-50, y=-50), radius=50)
-
+  c2 = circle(x=-50, y=50, r=50)
+  c3 = circle(x=50, y=-50, r=50)
+  c4 = circle(x=-50, y=-50, r=50)
 
   # show the circles
   show(c1, c2, c3, c4)
 code: |
   # create the center circle
-  c1 = Circle(center=Point(x=50, y=50), radius=50)
+  c1 = circle(x=50, y=50, r=50)
 
   # create the remaining three circles
 
