@@ -10,7 +10,7 @@ relations between the shapes used to make a compound shape.
 The `+` operator is used to join two shapes together.
 
 ``` {.python .example}
-shape = Circle() + Rectangle(width=200, height=200)
+shape = circle(r=100) + rectangle(w=200, h=200)
 show(shape)
 ```
 
@@ -20,7 +20,7 @@ and a rectangle.
 Now, let's try to create a donut by adding two circles.
 
 ``` {.python .example}
-donut = Circle(radius=100) + Circle(radius=50)
+donut = circle(r=100) + circle(r=50)
 show(donut)
 ```
 
@@ -38,7 +38,7 @@ that using variables.
 
 ```{.python .joy .example}
 r = 100
-donut = Circle(radius=r) + Circle(radius=r/2)
+donut = circle(r=r) + circle(r=r/2)
 show(donut)
 ```
 
