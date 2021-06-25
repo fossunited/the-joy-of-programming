@@ -35,8 +35,9 @@ c2 = circle(x=50, fill="purple")
 show(c1, c2)
 ```
 
-As you can see the rectangle is being drawn on top of the circle.
-Change the `show(c1, c2)` to `show(c2, c1)` and see what happens.
+As you can see the purple circle is being drawn on top of the pink circle.
+The shapes are drawn in the order they are passed to the `show` function.
+Can you try to make the pink circle come on top of the purple circle?
 
 ## The Stroke Color
 

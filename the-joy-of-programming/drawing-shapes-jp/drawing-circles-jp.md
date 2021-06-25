@@ -3,6 +3,8 @@
 In this lesson, we'll learn how to write programs to draw circles on the
 canvas.
 
+{{ YouTubeVideo("oS-E_7XnQFo") }}
+
 ## Simple Circle
 
 We'll start with drawing a circle. This involves two steps, creating a

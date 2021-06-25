@@ -12,12 +12,12 @@ You may be wondering what is _pixels_. Just like we measure length of physical o
 
 TODO: place canvas image
 
-## Positining the Circle
+## Positioning the Circle
 
 We can specify the center of the circle using the `x` and `y` parameters.
 
 ```{.joy .example}
-c = circle(x=50, y=0)
+c = circle(x=50, y=0, r=50)
 show(c)
 ```
 
@@ -35,5 +35,6 @@ Wasn't that simple? Let's try some exercises now.
 {{ Exercise("three-circles-in-a-column-jp") }}
 {{ Exercise("grid-of-circles-jp") }}
 {{ Exercise("four-circles-jp") }}
+{{ Exercise("five-circles-jp") }}
 {{ Exercise("three-bottom-circles-jp") }}
 {{ Exercise("three-bottom-circles-large-jp") }}
