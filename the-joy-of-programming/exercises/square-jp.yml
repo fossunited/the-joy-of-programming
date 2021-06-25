@@ -1,0 +1,23 @@
+answer: |-
+  # write the square function here
+  def square(x, y, length):
+    return rectangle(x=x, y=y, w=length, h=length)
+
+  # the main program
+  s1 = square(x=50, y=50, length=100)
+  s2 = square(x=-50, y=-50, length=100)
+  show(s1, s2)
+code: |
+  # write the square function here
+
+  # the main program
+  s1 = square(x=50, y=50, length=100)
+  s2 = square(x=-50, y=-50, length=100)
+  show(s1, s2)
+description: |
+  Write a function `square` that takes three arguments x, y and length
+  and creates a square with center at (x, y) and with sides of given length.
+
+
+name: square-jp
+title: The Square

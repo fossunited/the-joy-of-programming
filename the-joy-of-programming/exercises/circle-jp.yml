@@ -1,0 +1,11 @@
+answer: |-
+  c = circle()
+  show(c)
+code: |
+  c = circle()
+  show(c)
+description: |
+  Write a program to draw a circle.
+
+name: circle-jp
+title: Draw a Circle

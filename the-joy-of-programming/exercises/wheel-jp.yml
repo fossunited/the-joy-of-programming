@@ -1,0 +1,24 @@
+answer: |
+  def wheel(x, y, r):
+    d = 2*r/3
+    c1 = circle(x, y, r)
+    c2 = circle(x, y, r/3)
+    c3 = circle(x-d, y, r/3)
+    c4 = circle(x+d, y, r/3)
+    c5 = circle(x, y-d, r/3)
+    c6 = circle(x, y+d, r/3)
+    return c1 + c2 + c3 + c4 + c5 + c6
+
+  shape = wheel(x=0, y=0, r=150)
+  show(shape)
+code: |
+  # write function wheel
+
+
+
+  # draw a wheel by calling that function
+  shape = wheel(x=0, y=0, r=150)
+  show(shape)
+description: Write a function to draw a wheel as shown in the figure below.
+name: wheel-jp
+title: Wheel

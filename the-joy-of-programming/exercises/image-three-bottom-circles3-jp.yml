@@ -1,0 +1,13 @@
+answer: |-
+  def bcircle(bx, by, r):
+    return circle(x=bx, y=by+r, r=r)
+
+  def dot(x, y):
+    return circle(x=x, y=y, r=5, fill="black")
+
+  shape = bcircle(0, 0, 50) + dot(0, 0)
+  show(shape)
+code:
+description: Draw three circles touching at the bottom.
+name: image-three-bottom-circles3-jp
+title: Image - There Bottom Circles

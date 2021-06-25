@@ -1,0 +1,15 @@
+answer: |2-
+  c0 = circle(x=0, y=0, r=50)
+  c1 = circle(x=100, y=0, r=50)
+  c2 = circle(x=-100, y=0, r=50)
+  c3 = circle(x=0, y=100, r=50)
+  c4 = circle(x=0, y=-100, r=50)
+
+  # show them
+  show(c0, c1, c2, c3, c4)
+code: |
+  # your code here
+
+description: Draw five circles as shows in the figure below.
+name: five-circlews-jp
+title: Five Circles

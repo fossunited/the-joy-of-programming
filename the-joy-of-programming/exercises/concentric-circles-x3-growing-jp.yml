@@ -1,0 +1,27 @@
+answer: |-
+  def circlex3(x, y, r):
+    return circle(x, y, r) + circle(x, y, 2*r/3) + circle(x, y, r/3)
+
+  x = -150
+
+  r = 25
+  x = x+r
+  c1 = circlex3(x, r, r)
+  x = x+r
+
+  r = 50
+  x = x + r
+  c2 = circlex3(x, r, r)
+  x = x + r
+
+  r = 75
+  x = x + r
+  c3 = circlex3(x, r, r)
+
+  show(c1, c2, c3)
+code: |
+  # your code here
+description: |
+  Write a program to solve draw the figure shown in the figure below.
+name: concentric-circles-x3
+title: Row of Growing Concentric Circles

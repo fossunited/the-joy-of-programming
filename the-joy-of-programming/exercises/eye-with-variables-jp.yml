@@ -2,7 +2,7 @@ answer: |-
   width = 200
 
   # create shape eye
-  eye = Ellipse(width=width, height=width/2) + Circle(radius=width/4)
+  eye = ellipse(w=width, h=width/2) + circle(r=width/4)
 
   # show the shape eye
   show(eye)

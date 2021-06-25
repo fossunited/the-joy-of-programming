@@ -1,0 +1,37 @@
+answer: |
+  def donut(x, y, r):
+    return circle(x=x, y=y, r=r) + circle(x=x, y=y, r=r/2)
+
+  def designer_wheel(x, y, r):
+    d = 2*r/3
+    c1 = circle(x, y, r)
+    c2 = circle(x, y, r/3)
+    c3 = donut(x-d, y, r/3)
+    c4 = donut(x+d, y, r/3)
+    c5 = donut(x, y-d, r/3)
+    c6 = donut(x, y+d, r/3)
+    return c1 + c2 + c3 + c4 + c5 + c6
+
+  def complex_wheel(x, y, r):
+    d = 2*r/3
+    c1 = circle(x, y, r)
+    c2 = circle(x, y, r/3)
+    c3 = designer_wheel(x-d, y, r/3)
+    c4 = designer_wheel(x+d, y, r/3)
+    c5 = designer_wheel(x, y-d, r/3)
+    c6 = designer_wheel(x, y+d, r/3)
+    return c1 + c2 + c3 + c4 + c5 + c6
+
+  shape = complex_wheel(x=0, y=0, r=150)
+  show(shape)
+code: |
+  # write function complex_wheel
+
+
+
+  # draw a complex_wheel by calling that function
+  shape = complex_wheel(x=0, y=0, r=150)
+  show(shape)
+description: Write a function to draw a wheel as shown in the figure below.
+name: wheel
+title: Wheel

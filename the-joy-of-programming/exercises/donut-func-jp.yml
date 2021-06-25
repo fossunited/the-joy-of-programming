@@ -1,0 +1,18 @@
+answer: |-
+  def donut(x, y, r):
+    return circle(x, y, r) + circle(x, y, r/2)
+
+  d1 = donut(50, -50, 50)
+  d2 = donut(-50, 50, 50)
+
+  show(d1, d2)
+code: |
+  # your code here
+description: |
+  Write a function `donut` that takes three arguments `x`, `y` and `r`
+  and creates a donut with `(x, y)` as center and `r` as the radius for
+  the outer circle.
+
+  Use the `donut` function defined to draw th figure shown below.
+name: donut-func-jp
+title: The Donut

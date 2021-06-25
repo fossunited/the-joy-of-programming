@@ -1,0 +1,14 @@
+answer: |-
+  def circlex3(x, y, r):
+    return circle(x, y, r) + circle(x, y, 2*r/3) + circle(x, y, r/3)
+
+  c1 = circlex3(0, 0, 50)
+  c2 = circlex3(-100, 0, 50)
+  c3 = circlex3(100, 0, 50)
+  show(c1, c2, c3)
+code: |
+  # your code here
+description: |
+  Write a program to solve draw the figure shown in the figure below.
+name: concentric-circles-x3
+title: Row of Concentric Circles

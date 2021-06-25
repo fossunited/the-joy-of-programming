@@ -2,8 +2,7 @@ answer: |-
   size = 100
 
   # create the donut
-  p = Point(x=100, y=100)
-  d = Circle(center=p, radius=size/2) + Circle(center=p, radius=size/4)
+  d = circle(x=100, y=100, r=size/2) + circle(x=100, y=100, r=size/4)
 
   # show it
   show(d)

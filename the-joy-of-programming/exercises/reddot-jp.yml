@@ -1,0 +1,21 @@
+answer: |-
+  # write the reddot function here
+  def reddot(x, y):
+    return circle(x=x, y=y, r=5, fill='red', stroke='red')
+
+  # the main program
+  c = circle(r=50)
+  d = reddot(x=0, y=50)
+  show(c, d)
+code: |
+  # write the reddot function here
+
+  # the main program
+  c = circle(r=50)
+  d = reddot(x=0, y=50)
+  show(c, d)
+description: |
+  Write a function `reddot` to create a dot in red color.
+
+name: reddot-jp
+title: The Red Dot
