@@ -1,0 +1,16 @@
+answer: |-
+  s1 = ellipse()
+  s2 = s1 | rotate(60)
+  s3 = s1 | rotate(120)
+
+  show(s1, s2, s3)
+code: |
+  s1 = ellipse()
+  # apply rotate transformation to create 2 more shapes
+
+  # show the shapes
+description: |
+  Write a program to draw the pattern shown in the figure using `rotate` transformation.
+
+name: rotate-three-ellipses-jp
+title: Three Ellipses

@@ -1,0 +1,29 @@
+answer: |-
+  x = -125
+  y = 0
+  r = 25
+
+  def concentric_circles(x, y, r, n):
+      step = r/n
+      for i in range(n):
+          c = circle(x, y, r)
+          show(c)
+          r = r-step
+
+  n = 1
+  # draw six concentric circles here
+  for i in range(6):
+      concentric_circles(x, y, r, n)
+      n = n + 1
+      x = x + 2*r
+code: |-
+  x = -125
+  y = 0
+  r = 25
+
+  # write a function to draw concentric circles
+
+  # draw six concentric circles here
+description: Draw six concentric circles in a line as shown in the figure below.
+name: six-concentric-circles-in-a-line-jp
+title: Six Concentric circles in a Line

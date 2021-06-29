@@ -1,0 +1,15 @@
+answer: |-
+  c = circle(r=50) + circle(r=25)
+  c1 = c | translate(x=50, y=50)
+  c2 = c | translate(x=50, y=-50)
+  c3 = c | translate(x=-50, y=50)
+  c4 = c | translate(x=-50, y=-50)
+  show(c1, c2, c3, c4)
+
+code: |
+  # your code here
+description: |
+  Write a program to create a 2x2 grid of donuts as shown in the figure below.
+
+name: translate-grid-of-donuts-jp
+title: Grid of Donuts

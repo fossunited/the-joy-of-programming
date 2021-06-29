@@ -1,0 +1,13 @@
+answer: |-
+  s1 = circle(x=0, y=50, r=50)
+  s2 = s1 | rotate(120)
+  s3 = s1 | rotate(240)
+  show(s1, s2, s3)
+code: |
+  # your code here
+description: |
+  Write a program to draw three circles as shown in the figure below
+  using `rotate` transformation.
+
+name: rotate-three-circles-jp
+title: Three Circles

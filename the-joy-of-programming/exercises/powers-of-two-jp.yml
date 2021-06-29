@@ -1,0 +1,11 @@
+answer: |-
+  for i in range(11):
+    print(2**i)
+code: |
+  # your code here
+
+description: |
+  Write a program to print powers of two from `2<sup>0</sup>` to `2<sup>10</sup>`.
+
+name: powers-of-two-jp
+title: Powers of Two

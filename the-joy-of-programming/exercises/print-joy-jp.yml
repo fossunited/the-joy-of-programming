@@ -1,0 +1,8 @@
+answer: |-
+  print("The Joy of Programming")
+code: ""
+description: |
+  Write a program in the editor below to print the message _The Joy of Programming_.
+
+name: print-joy-jp
+title: The Joy of Programming

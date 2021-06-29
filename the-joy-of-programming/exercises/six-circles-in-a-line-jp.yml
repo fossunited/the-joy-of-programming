@@ -1,0 +1,18 @@
+answer: |-
+  x = -125
+  y = 0
+  r = 25
+  # draw six circles here
+  for i in range(6):
+      c = circle(x=x, y=y, r=r)
+      show(c)
+      x = x + 2*r
+code: |-
+  x = -125
+  y = 0
+  r = 25
+
+  # draw six circles here
+description: Draw six circles in a line as shown in the figure below.
+name: six-circles-in-a-line-jp
+title: Six Circles in a Line

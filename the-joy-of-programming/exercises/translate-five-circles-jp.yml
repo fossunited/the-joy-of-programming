@@ -1,0 +1,15 @@
+answer: |-
+  c = circle(r=50)
+  c1 = c | translate(x=50, y=0)
+  c2 = c | translate(x=100, y=0)
+  c3 = c | translate(x=-50, y=0)
+  c4 = c | translate(x=-100, y=0)
+  show(c, c1, c2, c3, c4)
+code: |
+  # your code here
+description: |
+  Write a program to create five circles as shown in the figure below
+  using `translate` transformation.
+
+name: translate-five-circles-jp
+title: Five Circles

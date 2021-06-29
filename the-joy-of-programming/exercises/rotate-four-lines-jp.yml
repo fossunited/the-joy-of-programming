@@ -1,0 +1,17 @@
+answer: |-
+  s1 = line()
+  s2 = s1 | rotate(45)
+  s3 = s1 | rotate(90)
+  s4 = s1 | rotate(135)
+
+  show(s1, s2, s3, s4)
+code: |
+  s1 = line()
+  # apply rotate transformation to create 3 more lines
+
+  # show all the lines
+description: |
+  Write a program to draw the pattern shown in the figure using `rotate` transformations.
+
+name: rotate-four-lines-jp
+title: Four Lines
