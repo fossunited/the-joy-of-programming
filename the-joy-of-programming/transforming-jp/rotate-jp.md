@@ -1,9 +1,11 @@
 # Rotate
 
-The rotate transformation rotates a shape around the origin by the specified angle.
+The rotate transformation rotates a shape around the origin by the specified angle in degrees.
+
+The following example, rotates a line by 30 degrees anticlockwise.
 
 ```{.python .joy .example}
-shape = line() | rotate(45)
+shape = line() | rotate(30)
 show(shape)
 ```
 
@@ -18,10 +20,10 @@ s4 = s1 | rotate(135)
 show(s1, s2, s3, s4)
 ```
 
-In the above example, we are taking an ellipse and rotating by 45, 90
+In the above example, we are taking an ellipse and rotating it by 45, 90
 and 135 degrees respectively.
 
-Another useful technique is to create a shape far from origin and then rotate it.
+Another useful technique is to create a shape away from the origin and then rotate it.
 
 ```{.python .joy .example}
 s1 = circle(x=100, y=0, r=10)
@@ -30,9 +32,8 @@ s3 = s1 | rotate(90)
 show(s1, s2, s3)
 ```
 
-Another useful technique to create interesting shapes is to start with a
-compound shape.
-
+Instead of starting with primitive shapes, we could start with a compound
+shape and apply multiple rotations to create surprising patterns.
 
 ```{.python .joy .example}
 s1 = circle(x=50, y=0, r=50) + circle(x=75, y=0, r=25)

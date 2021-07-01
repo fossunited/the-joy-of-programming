@@ -6,19 +6,23 @@ streach or squeeze.
 The translate transformation moves the given shape by specified amount
 in x and y directions.
 
+The following example, moves a circle at the center towards right by 100
+pixels.
+
 ```{.python .joy .example}
 shape = circle(r=50) | translate(x=100, y=0)
 show(shape)
 ```
 
 The transformations are applied using the `|` operator. Just like the
-`+` and `/` operators perform addition, division etc., the `|` operator
-when used between a shape and transformation, applies the transformation to the shape.
+`+` and `*` operators perform addition, multiplication etc., the `|` operator
+when used between a shape and a transformation, applies the transformation
+to the shape.
 
 The `translate` function create a transformation to move the given shape
 by the specified `x` and `y` values.
 
-The same program could be written as the following:
+The same program could also be written as the following:
 
 ```{.python .joy .example}
 c = circle(r=50)
@@ -41,29 +45,16 @@ c3 = c1 | translate(x=-100, y=0)
 show(c1, c2, c3)
 ```
 
-We could turn that into a reuseable function.
+We could start with slightly more interesting shape and apply the
+same transformations.
 
 ```{.python .joy .example}
-def three_in_a_row(shape, width):
-    left = shape | translate(x=-width, y=0)
-    right = shape | translate(x=width, y=0)
-    return left + shape + right
-
-shape = three_in_a_row(circle(r=50), width=100)
-show(shape)
+s1 = circle(r=50) + ellipse(w=100, h=50) + ellipse(w=50, h=100)
+s2 = s1 | translate(x=100, y=0)
+s3 = s1 | translate(x=-100, y=0)
+show(s1, s2, s3)
 ```
 
-Once we have the function, we could apply it to any shape.
-
-```{.python .joy .example}
-def three_in_a_row(shape, width):
-    left = shape | translate(x=-width, y=0)
-    right = shape | translate(x=width, y=0)
-    return left + shape + right
-
-shape = circle(r=50) + ellipse(w=100, h=50) + ellipse(w=50, h=100)
-row = three_in_a_row(shape, width=100)
-show(row)
-```
-
+{{ Exercise("translate-five-circles-jp") }}
 {{ Exercise("translate-grid-jp") }}
+{{ Exercise("translate-grid-of-donuts-jp") }}

@@ -44,17 +44,17 @@ To flip vertically, the stuff on the right need to move to the left and vice ver
 Which means we need to change the x-coordinates. It may sound counter intutive,
 but you need to `scale(x=-1)` to flip it vertically.
 
-Let's start with the original shape.
+Let's start with a shape.
 
 ```{.python .joy .example}
-s1 = circle(x=100, y=100, r=50) + line(x1=-25, y1=-25, x2=100, y2=100)
+s1 = circle(x=-50, y=100, r=50) + circle(x=-15, y=30, r=30)
 show(s1)
 ```
 
 Now let's make a mirror image of that by flipping vertically.
 
 ```{.python .joy .example}
-s1 = circle(x=100, y=100, r=50) + line(x1=-25, y1=-25, x2=100, y2=100)
+s1 = circle(x=-50, y=100, r=50) + circle(x=-15, y=30, r=30)
 s2 = s1 | scale(x=-1)
 show(s2)
 ```
@@ -62,7 +62,7 @@ show(s2)
 How about flipping horizontally?
 
 ```{.python .joy .example}
-s1 = circle(x=100, y=100, r=50) + line(x1=-25, y1=-25, x2=100, y2=100)
+s1 = circle(x=-50, y=100, r=50) + circle(x=-15, y=30, r=30)
 s2 = s1 | scale(y=-1)
 show(s2)
 ```
@@ -70,9 +70,11 @@ show(s2)
 We could even flip in both directions.
 
 ```{.python .joy .example}
-s1 = circle(x=100, y=100, r=50) + line(x1=-25, y1=-25, x2=100, y2=100)
+s1 = circle(x=-50, y=100, r=50) + circle(x=-15, y=30, r=30)
 s2 = s1 | scale(x=-1, y=-1)
 show(s2)
 ```
+
+## Exercises
 
 {{ Exercise("scale-concentric-circles-jp") }}
