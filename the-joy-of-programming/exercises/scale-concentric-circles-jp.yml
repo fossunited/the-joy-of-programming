@@ -1,0 +1,16 @@
+answer: |-
+  c1 = circle(r=150)
+  c2 = c1 | scale(2/3)
+  c3 = c1 | scale(1/3)
+  show(c1, c2, c3)
+code: |
+  c1 = circle(r=150)
+  # create the remaining two circles by scaling c1
+
+  # show all of them
+description: |
+  Write a program to three concetric circles by scaling the outer circle
+  to create the inner circles.
+
+name: scale-concentric-circles-jp
+title: Concentric Circles
