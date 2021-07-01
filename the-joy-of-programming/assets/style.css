@@ -5,7 +5,7 @@
 }
 .CodeMirror-scroll {
     max-height: 300px;
-    min-height: 200px;
+    min-height: 208px;
 }
 .controls {
     padding: 10px 0px;
@@ -92,14 +92,23 @@ button {
   width: 200px;
 }
 
-
-canvas {
+.svg-image {
   position: absolute;
   left: 0px;
   top: 0px;
   width: 210px;
   height: 210px;
   cursor: crosshair;
+
+  border: 5px solid #eee;
+}
+
+
+.svg-exercise-image {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #eee;
+  margin-top: 10px;
 }
 
 .canvas-wrapper {
@@ -111,4 +120,9 @@ canvas {
   width: 200px;
   white-space: pre-wrap;
   word-wrap: break-word;
+  font-size: 0.8em;
+}
+
+header {
+  z-index: 10 !important;
 }
