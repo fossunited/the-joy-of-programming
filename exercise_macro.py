@@ -7,6 +7,7 @@ import json
 from urllib.parse import urlparse
 import websocket
 import yaml
+import markdown
 
 import sys
 sys.path.append("src")
@@ -26,13 +27,48 @@ TEMPLATE = """
 </div>
 """
 
-template = jinja2.Template(TEMPLATE)
+IMAGE_TEMPLATE = """
+<div class="exercise-image svg-exercise-image" data-image='{{image | tojson}}'>
+</div>
+"""
 
-def exercise_macro(name):
+
+template = jinja2.Template(TEMPLATE)
+image_template = jinja2.Template(IMAGE_TEMPLATE)
+
+def youtube_macro(name):
+    return f"""
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/{name}"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+    """
+
+def exercise_macro(name, show_image="true"):
     path = f"the-joy-of-programming/exercises/{name}.yml"
     exercise = yaml.safe_load(open(path))
-    exercise['image'] = livecode_to_svg(exercise['answer'])
+    exercise['description'] = markdown.markdown(exercise['description'])
+    if show_image == "true":
+        exercise['image'] = livecode_to_svg(exercise['answer'])
+    else:
+        exercise['image'] = None
     return template.render(**exercise)
+
+def image_macro(name):
+    """The image macro is also uses an exercise file.
+
+    Typically, the exercises used as images are prefixed with "image-".
+
+    The answer field of the exercise is used to generate the image and
+    all other fields are ignored.
+    """
+    path = f"the-joy-of-programming/exercises/{name}.yml"
+    exercise = yaml.safe_load(open(path))
+    image = livecode_to_svg(exercise['answer'])
+    return image_template.render(image=image)
 
 def get_livecode_ws_url():
     url = urlparse(LIVECODE_BASE_URL)
@@ -66,7 +102,7 @@ def livecode_to_svg(code):
     return image
 
 def _livecode_to_svg(code, timeout=3):
-    print("livecode", repr(code[:20]))
+    print("livecode2", repr(code[:20]))
     try:
         ws = websocket.WebSocket()
         ws.settimeout(timeout)
@@ -77,11 +113,13 @@ def _livecode_to_svg(code, timeout=3):
         ws.send(json.dumps(msg))
 
         messages = _read_messages(ws)
-        commands = [m for m in messages if m['msgtype'] == 'image']
-        if commands:
-            return commands[0]['image']
-        else:
-            return ""
+        commands = [m for m in messages if m['msgtype'] == 'shape']
+        print("commands", commands)
+        return (
+            '<svg width="300" height="300" viewBox="-150 -150 300 300" fill="none" stroke="black" xmlns="http://www.w3.org/2000/svg">\n'
+            + "\n".join(m['shape'] for m in commands)
+            + "\n</svg>\n"
+        )
     except websocket.WebSocketException as e:
         print("ERROR:", e)
 

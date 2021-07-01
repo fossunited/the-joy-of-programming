@@ -8,9 +8,33 @@ theme:
   custom_dir: overrides
 
 nav:
+  - Getting Started:
+    - getting-started-jp/welcome-jp.md
+    - getting-started-jp/livecoding-environment-jp.md
+    - getting-started-jp/hello-world-jp.md
+    - getting-started-jp/numbers-jp.md
+    - getting-started-jp/variables-jp.md
+    - getting-started-jp/lists-jp.md
+
   - Drawing Shapes:
-    - drawing-shapes-jp/drawing-simple-shapes-jp.md
-    - drawing-shapes-jp/the-coordinates-jp.md
+    - drawing-shapes-jp/drawing-circles-jp.md
+    - drawing-shapes-jp/positioning-shapes-jp.md
+    - drawing-shapes-jp/more-shapes-jp.md
+    - drawing-shapes-jp/lines-and-polygons-jp.md
+    - drawing-shapes-jp/adding-colors-jp.md
+  - Composing New Shapes:
+    - composing-new-shapes-jp/combining-shapes-jp.md
+    - composing-new-shapes-jp/creating-new-shapes-jp.md
+  - Repeating:
+    - repeating-jp/for-loop-jp.md
+    - repeating-jp/repeating-shapes-jp.md
+  - Transforming:
+    - transforming-jp/translate-jp.md
+    - transforming-jp/rotate-jp.md
+    - transforming-jp/scale-jp.md
+
+  - Notes:
+    - notes/notes.md
 
 # nav:
 #   - The Joy of Programming: index.md
@@ -36,13 +60,15 @@ nav:
 #   - fenced_code
 #   - macros
 markdown_extensions:
+    - admonition
     - toc:
         permalink: True
         separator: "_"
     - macros:
         registry:
           Exercise: exercise_macro:exercise_macro
-
+          Image: exercise_macro:image_macro
+          YouTubeVideo: exercise_macro:youtube_macro
 
 extra_css:
   - assets/codemirror/lib/codemirror.css
