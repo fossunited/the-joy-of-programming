@@ -10,12 +10,15 @@ canvas.
 We'll start with drawing a circle. This involves two steps, creating a
 circle and showing it.
 
-```{.joy .example #one-circle}
+```{.python .joy .example #one-circle}
 c = circle()
 show(c)
 ```
 
 The first line creates a circle shape and the secone line shows it.
+
+Just like the `print` function is used to display numbers and strings,
+the `show` function is used to display shapes.
 
 ## Controlling the Size
 
@@ -23,7 +26,7 @@ The size of the circle is controlled by its radius. By default, the
 radius of the circle will be 100, but we can specify a different value
 for the radius. The is done by setting the parameter `r`.
 
-```{.joy .example #circle-with-radius}
+```{.python .joy .example #circle-with-radius}
 c = circle(r=50)
 show(c)
 ```
@@ -49,12 +52,21 @@ Try making the circle bigger by changing the value of parameter `r`.
 We can also create more than one circle. The following example draws
 two conentric circles with radius `50` and `100`.
 
+```{.python .joy .example #two-circles}
+c1 = circle(r=50)
+show(c1)
+
+c2 = circle(r=100)
+show(c2)
+```
+
+Just like `print`, the `show` function also supports taking multiple
+arguments and we can use that to show multiple shapes at once.
+
 ```{.joy .example #two-circles}
 c1 = circle(r=50)
 c2 = circle(r=100)
 show(c1, c2)
 ```
-
-The `show` function supports showing multiple shapes together.
 
 {{ Exercise("three-concentric-circles-jp") }}
