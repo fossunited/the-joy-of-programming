@@ -1,0 +1,16 @@
+answer: |-
+  s1 = ellipse(x=75, y=0, w=150, h=75)
+  s2 = s1 | scale(2/3)
+  s3 = s1 | scale(1/3)
+  show(s1, s2, s3)
+code: |
+  s1 = ellipse(x=75, y=0, w=150, h=75)
+  # create the remaining two circles by scaling c1
+
+  # show all of them
+description: |
+  Write a program to draw three ellipses by scaling the outer ellipse
+  to create the inner ellipses.
+
+name: scale-ellipse-jp
+title: Layers of Ellipse

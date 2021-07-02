@@ -78,3 +78,4 @@ show(s2)
 ## Exercises
 
 {{ Exercise("scale-concentric-circles-jp") }}
+{{ Exercise("scale-ellipse-jp") }}
