@@ -1,0 +1,11 @@
+answer: |-
+  shape = ellipse(w=250, h=150) | repeat(60, rotate(5)|scale(0.95))
+  show(shape)
+code: |
+  # your code here
+
+description: |
+  Repeat rotation and scale on an ellipse to draw the following pattern.
+
+name: repeat-cycle-ellipse-jp
+title: The Magic Ellipse

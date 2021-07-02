@@ -1,0 +1,12 @@
+answer: |-
+  z = line(x1=25, y1=0, x2=100, y2=0)
+  shape = z | repeat(19, rotate(10))
+  show(shape)
+code: |
+  # your code here
+
+description: |
+  Rotate a line to form the pattern shown in the following figure.
+
+name: repeat-rotate-line-jp
+title: The Sun

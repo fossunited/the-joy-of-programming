@@ -1,0 +1,12 @@
+answer: |-
+  shape = rectangle(x=100, y=0, w=25, h=25) | repeat(12, rotate(30))
+  show(shape)
+code: |
+  # your code here
+
+description: |
+  Rotate a square to form the pattern shown in the following figure.
+  Each square in the figure is of length 25.
+
+name: repeat-rotate-square-jp
+title: The Clock
