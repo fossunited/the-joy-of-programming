@@ -1,0 +1,22 @@
+
+answer: |-
+  def random_circle():
+      x = random(-150, 150)
+      y = random(-150, 150)
+      r = random(50)
+      return circle(x=x, y=y, r=r, stroke=random_color())
+
+  def random_color():
+    return color(r=random(255), g=random(255), b=random(255), a=0.5)
+
+  for i in range(1000):
+      c = random_circle()
+      show(c)
+code: |
+  # your code here
+description: |
+  Draw 1000 circles at random with random color.
+  Make the colors transparent with an alpha value of 0.5.
+
+name: random-colored-circles-jp
+title: Random Colored Circles

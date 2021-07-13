@@ -1,0 +1,25 @@
+answer: |-
+  n = 6
+  d = 300/n
+  r = d/2
+
+  x = -150 + r
+  y = 0
+
+  for i in range(n):
+    if i % 2 == 0:
+      shape = circle(x=x, y=y, r=r)
+    else:
+      shape = rectangle(x=x, y=y, w=d, h=d)
+    show(shape)
+    x = x + d
+code: |
+  n = 6
+
+  # write code to draw 10 shapes alternating between circle and square
+description: |
+  Let's write a program to create a row of shapes alternating between
+  circle and square.
+
+name: if-circle-square-jp
+title: Circles and Squares

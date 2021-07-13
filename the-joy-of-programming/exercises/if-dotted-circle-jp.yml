@@ -1,0 +1,66 @@
+answer: |-
+  def dot(x, y):
+      return circle(x=x, y=y, r=5, fill="black")
+
+  # change this function to support left and right values
+  # for dot_location
+  def dotted_circle(x, y, r, dot_location):
+      c = circle(x=x, y=y, r=r)
+
+      if dot_location == "center":
+          d = dot(x=x, y=y)
+      elif dot_location == "top":
+          d = dot(x=x, y=y+r)
+      elif dot_location == "bottom":
+          d = dot(x=x, y=y-r)
+      elif dot_location == "right":
+          d = dot(x=x+r, y=y)
+      elif dot_location == "left":
+          d = dot(x=x-r, y=y)
+      else:
+          print("ERROR: invalid dot_location:" + dot_location)
+          return c
+
+      return c + d
+
+  c1 = dotted_circle(x=0, y=0, r=50, dot_location="center")
+  c2 = dotted_circle(x=0, y=75, r=25, dot_location="top")
+  c3 = dotted_circle(x=0, y=-75, r=25, dot_location="bottom")
+  c4 = dotted_circle(x=75, y=0, r=25, dot_location="right")
+  c5 = dotted_circle(x=-75, y=0, r=25, dot_location="left")
+  show(c1, c2, c3, c4, c5)
+code: |
+  def dot(x, y):
+      return circle(x=x, y=y, r=5, fill="black")
+
+  # change this function to support left and right values
+  # for dot_location
+  def dotted_circle(x, y, r, dot_location):
+      c = circle(x=x, y=y, r=r)
+
+      if dot_location == "center":
+          d = dot(x=x, y=y)
+      elif dot_location == "top":
+          d = dot(x=x, y=y+r)
+      elif dot_location == "bottom":
+          d = dot(x=x, y=y-r)
+      else:
+          print("ERROR: invalid dot_location:" + dot_location)
+          return c
+
+      return c + d
+
+  c1 = dotted_circle(x=0, y=0, r=50, dot_location="center")
+  c2 = dotted_circle(x=0, y=75, r=25, dot_location="top")
+  c3 = dotted_circle(x=0, y=-75, r=25, dot_location="bottom")
+  c4 = dotted_circle(x=75, y=0, r=25, dot_location="right")
+  c5 = dotted_circle(x=-75, y=0, r=25, dot_location="left")
+  show(c1, c2, c3, c4, c5)
+
+description: |
+  Extend the above example to support drawing the dot at the left and
+  the right location on the circle by specifying `"left"` and `"right"`
+  as value for `dot_location` respectively.
+
+name: if-dotted-circle-jp
+title: Dotted Circles

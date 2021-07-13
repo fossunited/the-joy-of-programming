@@ -1,0 +1,22 @@
+
+answer: |-
+  def random_line():
+      x1 = random(-150, 150)
+      y1 = random(-150, 150)
+      x2 = random(-150, 150)
+      y2 = random(-150, 150)
+      return line(x1=x1, y1=y1, x2=x2, y2=y2, stroke=random_color())
+
+  def random_color():
+    return color(r=random(255), g=random(255), b=random(255), a=0.5)
+
+  for i in range(1000):
+      li = random_line()
+      show(li)
+code: |
+  # your code here
+description: |
+  Extend the previous exercise even further to make the color transparent with alpha value of 0.5 and incrase the number of circles to 1000.
+
+name: random-colored-lines-with-transparency-jp
+title: Random Colored Lines with Transparency

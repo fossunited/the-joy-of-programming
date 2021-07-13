@@ -1,0 +1,21 @@
+answer: |-
+  def random_line():
+      x1 = random(-150, 150)
+      y1 = random(-150, 150)
+      x2 = random(-150, 150)
+      y2 = random(-150, 150)
+      return line(x1=x1, y1=y1, x2=x2, y2=y2, stroke=random_color())
+
+  def random_color():
+    return color(r=random(255), g=random(255), b=random(255))
+
+  for i in range(100):
+      li = random_line()
+      show(li)
+code: |
+  # your code here
+description: |
+  Extend the above exercise to make each line in a random color.
+
+name: random-colored-lines-jp
+title: Random Colored Lines

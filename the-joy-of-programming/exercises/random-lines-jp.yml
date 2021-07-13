@@ -1,0 +1,19 @@
+answer: |-
+  def random_line():
+      x1 = random(-150, 150)
+      y1 = random(-150, 150)
+      x2 = random(-150, 150)
+      y2 = random(-150, 150)
+
+      return line(x1=x1, y1=y1, x2=x2, y2=y2)
+
+  for i in range(100):
+      li = random_line()
+      show(li)
+code: |
+  # your code here
+description: |
+  Write a function `random_line` to draw a line with random start and end coordinates and use that to draw 100 lines at random.
+
+name: random-lines-jp
+title: Random Lines

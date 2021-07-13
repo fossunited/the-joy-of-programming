@@ -1,6 +1,6 @@
 answer: |-
   print(1*2*3*4*5)
-code: ""
+code: " "
 description: |
   Write a program to calculate the factorial of 5. It is computed by
   multiplying all the numbers from `1` to `5`.
