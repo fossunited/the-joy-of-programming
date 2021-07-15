@@ -1,0 +1,16 @@
+answer: |-
+  r = rectangle()
+  show(r)
+code: |
+  # change this program to draw a rectangle
+  # instead of a circle
+  shape = circle()
+  show(shape)
+description: |
+  Just like `circle` function creates a circle shape,
+  the `rectangle` function creates a rectangle. Change
+  the program in the editor below to show a rectangle
+  instead of circle.
+
+name: draw-rectangle-jp
+title: Rectangle

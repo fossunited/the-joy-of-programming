@@ -1,8 +1,12 @@
 answer: |-
   print("The Joy of Programming")
-code: " "
+code: |
+  # Change this program to print The Joy of Programming
+  # instead of Hello, world!
+  print("Hello, World!")
 description: |
-  Write a program in the editor below to print the message _The Joy of Programming_.
+  Change the program in the editor below to print the message
+  _The Joy of Programming_ instead of _Hello, world!_.
 
 name: print-joy-jp
 title: The Joy of Programming
