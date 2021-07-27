@@ -1,0 +1,56 @@
+title: Repeat 4
+description: |
+  Write a function `repeat4` to takes a shape as argument and
+  repeats it 4 times in a 2x2 grid.
+
+code: |
+  # the beside, below and grid functions are already defined for you
+  def beside(a, b):
+      a1 = a | scale(x=0.5) | translate(x=-75)
+      b1 = b | scale(x=0.5) | translate(x=75)
+      return a1 + b1
+
+  def below(a, b):
+      a1 = a | scale(y=0.5) | translate(y=75)
+      b1 = b | scale(y=0.5) | translate(y=-75)
+      return a1 + b1
+
+  def grid(a, b, c, d):
+      return below(
+          beside(a, b),
+          beside(c, d))
+
+  # define the repeat4 function here
+
+
+  # make a ball and cycle of it
+  ball =  circle(fill="lightblue") + ellipse(fill="skyblue") + circle(x=80, y=0, r=20, fill="darkblue")
+  shape = repeat4(ball)
+  show(shape)
+
+answer: |-
+  # define the cycle function here
+  def beside(a, b):
+      a1 = a | scale(x=0.5) | translate(x=-75)
+      b1 = b | scale(x=0.5) | translate(x=75)
+      return a1 + b1
+
+  def below(a, b):
+      a1 = a | scale(y=0.5) | translate(y=75)
+      b1 = b | scale(y=0.5) | translate(y=-75)
+      return a1 + b1
+
+  def grid(a, b, c, d):
+      return below(
+          beside(a, b),
+          beside(c, d))
+
+  def repeat4(shape):
+    return grid(
+      shape, shape,
+      shape, shape)
+
+  # make a ball and cycle of it
+  ball =  circle(fill="lightblue") + ellipse(fill="skyblue") + circle(x=80, y=0, r=20, fill="darkblue")
+  shape = repeat4(ball)
+  show(shape)

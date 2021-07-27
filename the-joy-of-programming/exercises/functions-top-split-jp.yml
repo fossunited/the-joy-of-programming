@@ -1,0 +1,50 @@
+title: Top Split
+description: |
+  Just like the previous example split the image multiple times
+  towards the right, write a program to split a shape in the
+  top direction.
+
+code: |
+  # the beside and below functions are already defined for you
+  def beside(a, b):
+      a1 = a | scale(x=0.5) | translate(x=-75)
+      b1 = b | scale(x=0.5) | translate(x=75)
+      return a1 + b1
+
+  def below(a, b):
+      a1 = a | scale(y=0.5) | translate(y=75)
+      b1 = b | scale(y=0.5) | translate(y=-75)
+      return a1 + b1
+
+  # the shape and the blank
+  shape = circle(fill="gray")
+  blank = circle(stroke="none")
+
+  # your code here
+
+
+answer: |-
+  # the beside and below functions are already defined for you
+  def beside(a, b):
+      a1 = a | scale(x=0.5) | translate(x=-75)
+      b1 = b | scale(x=0.5) | translate(x=75)
+      return a1 + b1
+
+  def below(a, b):
+      a1 = a | scale(y=0.5) | translate(y=75)
+      b1 = b | scale(y=0.5) | translate(y=-75)
+      return a1 + b1
+
+  # the shape and the blank
+  shape = circle(fill="gray")
+  blank = circle(stroke="none")
+
+  # your code here
+
+  split1 = below(blank, shape)
+  split2 = below(beside(split1, split1), shape)
+  split3 = below(beside(split2, split2), shape)
+  split4 = below(beside(split3, split3), shape)
+
+  final = beside(split4, blank)
+  show(final)
