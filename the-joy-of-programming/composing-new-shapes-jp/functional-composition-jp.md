@@ -1,21 +1,23 @@
 # Functional Composition
 
-In this lesson, we are going to look a new way of composing shapes, by using functions.
+<!-- FIELDS index_=2 index_label=6.2 -->
 
-We'll start with by defining two functions `beside` and `below`.
-The `beside` functions takes shapes and put them one next to each other and the `below` function takes two shapes and puts one below the other.
+In this lesson, we are going to look at a new way of composing shapes, by using functions.
 
-We'll see simple functions like these can be combined together to create a lot more complicated patterns.
+We'll start with defining two functions `beside` and `below`.
+The `beside` functions take shapes and put them one next to each other and the `below` function takes two shapes and puts one below the other.
+
+We'll see simple functions like these can be combined to create a lot more complicated patterns.
 
 ## The `beside` function
 
 The _beside_ function takes two shapes and puts the first one in the left half and the second one in the right half.
 
-<img src="/assets/images/beside.svg" style="width: 50%"/>
+<img src="/files/beside.svg" style="width: 50%"/>
 
-Let's see how to implement the function.
+Let's see what does it take to keep two shapes one beside the other. First, we need to squeeze both the shapes so that each one takes only half the width to be able to place both of them beside each other. Once the width is fixed, we need to move the shapes to the left and right respectively, and merge them.
 
-<img src="/assets/images/beside-details.svg" style="width: 50%"/>
+<img src="/files/beside-details.svg" style="width: 50%"/>
 
 Here is how it looks when we write that in code.
 
@@ -35,11 +37,11 @@ show(shape)
 
 The _below_ function takes two shapes and puts the first one in the top half and the second one in the bottom half.
 
-<img src="/assets/images/below.svg" style="width: 50%"/>
+<img src="/files/below.svg" style="width: 50%"/>
 
-Just like we scaled and translated the shapes in the x-directioon for `beside`, we need to do the same in the `y` direction for `below`.
+Just like we scaled and translated the shapes in the x-direction for `beside`, we need to do the same in the `y` direction for `below`.
 
-<img src="/assets/images/below-details.svg" style="width: 50%"/>
+<img src="/files/below-details.svg" style="width: 50%"/>
 
 
 ```{.python .joy .example}
@@ -56,7 +58,7 @@ show(shape)
 
 ## Composing Functions
 
-Now, lets see how to create interesting patterns just by combining the two functions `beside` and `below`.
+Now, let's see how to create interesting patterns by combining just these two functions `beside` and `below`.
 
 ### Example: Grid
 
@@ -71,7 +73,7 @@ def grid(a, b, c, d):
         beside(c, d))
 ```
 
-Lets put all the code together.
+Let's put all the code together.
 
 
 ```{.python .joy .example}
@@ -107,29 +109,29 @@ show(shape)
 
 Let's try something more interesting. How about writing a program to make the following pattern.
 
-<img src="/assets/images/right-split.svg" style="width: 50%"/>
+<img src="/files/right-split.svg" style="width: 50%"/>
 
 Let's examine the pattern. The following figure shows the pattern in 3 levels.
 
-<img src="/assets/images/right-split-details.svg" style="width: 50%"/>
+<img src="/files/right-split-details.svg" style="width: 50%"/>
 
-The level-1 is the shape and a blank put besides each other. The level-2 is made of the shape and two level-1 blocks and the level-3 is made of the shape and two level-2 blocks.
+The level-1 pattern is the shape and a blank put beside each other. The level-2 pattern is made of the shape and two level-1 patterns and the level-3 pattern is made of the shape and two level-2 patterns.
 
-That looks like an interesting pattern. Isn't it? Now, let't put that in code.
+That looks like an interesting pattern. Isn't it? Now, let's put that in code.
 
-First, we need blank shape. We can cheat by creating a circle with no storke. There will be a shape, but it won't appear.
+First, we need a blank shape. We can cheat by creating a circle with no stroke. There will be a shape, but it won't appear.
 
 ```text
 blank = circle(fill="none")
 ```
 
-To make level-1 split, we need to put the shape and a blank together.
+To make a level-1 split, we need to put the shape and a blank together.
 
 ```text
 split1 = beside(shape, blank)
 ```
 
-To make level-2 split, we need to take the split1, put one below the other, and put it beside the original shape.
+To make a level-2 split, we need to take the split1, put one below the other, and put it beside the original shape.
 
 ```text
 split2 = beside(shape, below(split1, split1))
@@ -159,7 +161,7 @@ split4 = beside(shape, below(split3, split3))
 show(split4)
 ```
 
-The circle has become an ellipse becase it got streached when be put it beside the other shapes. We could fix it by putting it below a blank shape.
+The circle has become an ellipse because it got stretched when be put beside the other shapes. We could fix it by putting it below a blank shape.
 
 ```{.python .joy .example}
 def beside(a, b):
