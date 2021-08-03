@@ -1,0 +1,20 @@
+answer: |-
+  numbers = [3, 8, 5, 2, 4]
+  # print the sum of first two elements of this list
+  result = numbers[0] + numbers[1]
+  print(result)
+code: |
+  # These are the list of numbers already provided to you.
+  numbers = [3, 8, 5, 2, 4]
+
+  # Compute the sum of first two elements of this list
+  # and print the result.
+
+description: |
+  Write a program to print the sum of first two elements of a list.
+
+  In the program, you were given a list of numbers, and you need
+  to access the first two elements of the list, add them and print the result.
+
+name: sum-of-first-two-elements-jp
+title: Sum of the first two elements

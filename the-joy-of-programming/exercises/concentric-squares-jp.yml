@@ -1,0 +1,16 @@
+title: Concentric Squares
+description: |
+  Write a program to create 10 concentric squares with the length of the outer square as 200 units.
+
+code: |
+  # your code here
+
+answer: |-
+  # your code here
+  d = 200
+  n = 10
+  step = d/n
+  for i in range(n):
+    shape = rectangle(w=d, h=d)
+    d = d-step
+    show(shape)

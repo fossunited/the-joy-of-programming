@@ -1,0 +1,26 @@
+name: row-of-eyes-jp
+title: Row of Eyes
+description: |
+  Write a program to draw a row of eye shapes as shown in the figure below.
+
+  You can reuse the code snippets from the examples in the lesson.
+answer: |-
+  def make_row(n):
+      w = 300/n
+      xstart = -150 + w/2
+      shapes = []
+
+      for i in range(n):
+          x = xstart + i * w
+          shape = make_shape(w, i, n) | translate(x=x)
+          shapes.append(shape)
+
+      return combine(shapes)
+  
+  def make_shape(w, i, n):
+      return ellipse(w=w, h=w/2) + circle(r=w/4, fill="black")
+
+  shape = make_row(n=6)
+  show(shape)
+code: |
+  # your code here

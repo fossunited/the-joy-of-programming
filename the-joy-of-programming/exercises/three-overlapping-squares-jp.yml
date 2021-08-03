@@ -8,7 +8,7 @@ code: |
 description: |
   Draw three overlapping squares as shown in the figure below.
 
-  Please note that the square do not have a border.
+  Please note that the squares do not have a border.
 
 name: three-overlapping-squares-jp
 title: Three Overlapping Squares

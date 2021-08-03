@@ -1,0 +1,26 @@
+title: Triangle
+description: |
+  Write a function `triangle` to draw the a triangle
+  given x1, y1, x2, y2 and x3. y3.
+
+  Hint: You could use the `polygon` function to create the triangle.
+
+code: |
+  # define triangle function here
+
+  # create and show a triangle
+  s = triangle(x1=0, y1=0, x2=100, y2=0, x3=0, y3=100)
+  show(s)
+
+answer: |-
+  # define triangle function here
+  def triangle(x1, y1, x2, y2, x3, y3):
+      return polygon([
+          point(x1, y1),
+          point(x2, y2),
+          point(x3, y3),
+      ])
+
+  # create and show a triangle
+  s = triangle(x1=0, y1=0, x2=100, y2=0, x3=0, y3=100)
+  show(s)

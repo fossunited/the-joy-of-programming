@@ -1,0 +1,36 @@
+name: row-of-squares-jp
+title: Row of Concentric Squares
+description: |
+  Write a program to draw a row of shapes, with increasing
+  number of concentric squares at each step as shown in the
+  figure below.
+
+answer: |-
+  def make_row(n):
+      w = 300/n
+      xstart = -150 + w/2
+      shapes = []
+
+      for i in range(n):
+          x = xstart + i * w
+          shape = make_shape(w, i, n) | translate(x=x)
+          shapes.append(shape)
+
+      return combine(shapes)
+
+  def make_shape(w, i, n):
+      return concentric_squares(w, i+1)
+
+  def concentric_squares(w, n):
+      step = w/n
+      wstart = step
+      shapes = []
+      for i in range(n):
+          wh = wstart + i * step
+          shapes.append(rectangle(w=wh, h=wh))
+      return combine(shapes)
+
+  shape = make_row(n=6)
+  show(shape)
+code: |
+    # your code here

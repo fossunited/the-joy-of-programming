@@ -10,13 +10,13 @@ answer: |-
   def random_color():
     return color(r=random(255), g=random(255), b=random(255), a=0.5)
 
-  for i in range(1000):
+  for i in range(100):
       li = random_line()
       show(li)
 code: |
   # your code here
 description: |
-  Extend the previous exercise even further to make the color transparent with alpha value of 0.5 and increase the number of circles to 1000.
+  Extend the previous exercise even further to make the color transparent with alpha value of 0.5.
 
 name: random-colored-lines-with-transparency-jp
 title: Random Colored Lines with Transparency

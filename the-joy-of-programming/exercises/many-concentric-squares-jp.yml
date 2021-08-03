@@ -1,0 +1,21 @@
+title: Many Concentric Squares
+description: |
+  Write a function to draw concentric squares and use it to draw the pattern shown below.
+
+code: |
+  # your code here
+
+answer: |-
+  # your code here
+  def concentric_squares(x, y, d, n):
+    step = d/n
+    for i in range(n):
+      shape = rectangle(x=x, y=y, w=d, h=d)
+      d = d-step
+      show(shape)
+    
+  concentric_squares(0, 0, 200, 10)
+  concentric_squares(100, 100, 100, 5)
+  concentric_squares(-100, -100, 100, 5)
+  concentric_squares(100, -100, 100, 5)
+  concentric_squares(-100, 100, 100, 5)    

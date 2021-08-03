@@ -1,0 +1,19 @@
+title: Triangle
+description: |
+  Write a program to draw the following pattern.
+
+  Hint: Start with a triangle using the `polygon` function.
+
+code: |
+  # your code here
+
+answer: |-
+  shape = polygon([
+      point(0, 0),
+      point(100, -50),
+      point(100, 50)
+  ])
+
+  n = 6
+  s = shape | translate(25) | repeat(n, rotate(360/n))
+  show(s)

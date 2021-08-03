@@ -1,0 +1,13 @@
+title: Hash
+description: |
+  Write a program to draw the following shape using lines.
+
+code: |
+  # your code here
+
+answer: |-
+  a1 = line(x1=-100, y1=50, x2=100, y2=50)
+  a2 = line(x1=-100, y1=-50, x2=100, y2=-50)
+  b1 = line(x1=-50, y1=-100, x2=-50, y2=100)
+  b2 = line(x1=50, y1=-100, x2=50, y2=100)
+  show(a1, a2, b1, b2)

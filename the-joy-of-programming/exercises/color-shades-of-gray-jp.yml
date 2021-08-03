@@ -1,0 +1,19 @@
+title: Shades of Gray
+description: |
+  Write a program to draw three circles showing shades of gray
+  with intensity 200, 150 and 100 respectively.
+
+  Can you guess how the RGB values be for creating gray shade?
+
+code: |
+  # your code here
+
+answer: |-
+  def gray_circle(x, gray):
+      fill = color(r=gray, g=gray, b=gray)
+      c = circle(x=x, y=0, r=50, fill=fill, stroke="none")
+      show(c)
+
+  gray_circle(-100, 200)
+  gray_circle(0, 150)
+  gray_circle(100, 100)

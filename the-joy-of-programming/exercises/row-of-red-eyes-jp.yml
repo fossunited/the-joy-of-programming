@@ -1,0 +1,29 @@
+name: row-of-red-eyes-jp
+title: Row of Red Eyes
+description: |
+  Write a program to draw a row of shapes as shown in the figure below.
+  Notice that the circle in each shape has a different shade of red,
+  going from 0 to 255 in equal increments as done in one of the examples.
+answer: |-
+  def make_row(n):
+      w = 300/n
+      xstart = -150 + w/2
+      shapes = []
+
+      for i in range(n):
+          x = xstart + i * w
+          shape = make_shape(w, i, n) | translate(x=x)
+          shapes.append(shape)
+
+      return combine(shapes)
+
+  def make_shape(w, i, n):
+      step = 255/(n-1)
+      r = i * step # the red component
+      fill = color(r=r, g=0, b=0)
+      return ellipse(w=w, h=w/2) + circle(r=w/4, fill=fill)
+
+  shape = make_row(n=6)
+  show(shape)
+code: |
+  # your code here

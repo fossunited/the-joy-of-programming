@@ -1,0 +1,19 @@
+title: Diagonals
+description: |
+  Write a program to draw the diagonals of a square using
+  the `line` function.
+
+code: |
+  # here is the square
+  s = rectangle(w=200, h=200)
+  show(s)
+
+  # draw the diagonals
+answer: |-
+  # here is the square
+  s = rectangle(w=200, h=200)
+  show(s)
+
+  d1 = line(x1=-100, y1=100, x2=100, y2=-100)
+  d2 = line(x1=100, y1=100, x2=-100, y2=-100)
+  show(d1, d2)

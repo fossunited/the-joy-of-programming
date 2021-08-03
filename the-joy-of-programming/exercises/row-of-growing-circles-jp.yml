@@ -1,0 +1,48 @@
+name: row-of-growing-circles-jp
+title: Row of Growing Circles
+description: |
+  Write a program to draw a row of circles, starting
+  with a small circle and increasing the size in each
+  subsequent circle, with sizes of circles growing in
+  equal increments.
+
+  The `make_row` function is already provided for you. You just need to write
+  the appropriate `make_shape` function.
+answer: |-
+  def make_row(n):
+      w = 300/n
+      xstart = -150 + w/2
+      shapes = []
+
+      for i in range(n):
+          x = xstart + i * w
+          shape = make_shape(w, i, n) | translate(x=x)
+          shapes.append(shape)
+
+      return combine(shapes)
+
+  def make_shape(w, i, n):
+      step = w/n/2
+      r = (i+1)*step
+      return circle(r=r)
+
+  shape = make_row(n=6)
+  show(shape)
+code: |
+  def make_row(n):
+      w = 300/n
+      xstart = -150 + w/2
+      shapes = []
+
+      for i in range(n):
+          x = xstart + i * w
+          shape = make_shape(w, i, n) | translate(x=x)
+          shapes.append(shape)
+
+      return combine(shapes)
+
+  # implement make_shape function
+
+  # create and show the row
+  shape = make_row(n=6)
+  show(shape)

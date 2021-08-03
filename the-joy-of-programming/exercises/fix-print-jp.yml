@@ -1,0 +1,20 @@
+answer: |-
+  x = 10
+  y = 5
+  z = x * y
+  print("result is", z)
+code: |
+  x = 10
+  y = 5
+  z = x * y
+  print("result is", "z")
+description: |
+  Mr. Thypon is trying to print the value of x * y.
+  He is expecting that the program to print _result is 50_,
+  but it is not doing that.
+
+  Do you see what is wrong with this program? Can you help
+  him fix this program?
+
+name: fix-print
+title: Can you fix this program?

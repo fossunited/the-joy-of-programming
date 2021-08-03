@@ -1,0 +1,17 @@
+title: Three Concentric Circles with Transparency
+description: |
+  Write a program to draw three circles with center at origin and with
+  radius 50, 100 and 150. Fill them with red color with an alpha
+  value of 0.5.
+
+code: |
+  # your code here
+
+answer: |
+  fill = color(r=255, g=0, b=0, a=0.5)
+  c1 = circle(r=50, fill=fill, stroke="none")
+  c2 = circle(r=100, fill=fill, stroke="none")
+  c3 = circle(r=150, fill=fill, stroke="none")
+
+  # show all of them
+  show(c1, c2, c3)

@@ -1,0 +1,13 @@
+title: Styled Polygon
+description: |
+  Write a program to draw the polygon shown in the figure below.
+
+answer: |-
+  p1 = point(x=-100, y=100)
+  p2 = point(x=100, y=100)
+  p3 = point(x=-100, y=-100)
+  p4 = point(x=100, y=-100) #v2
+  s = polygon([p1, p2, p3, p4], fill="yellow", stroke="red", stroke_width=5)
+  show(s)
+code: |
+  # your code here

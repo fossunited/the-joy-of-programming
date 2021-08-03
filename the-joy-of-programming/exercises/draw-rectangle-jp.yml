@@ -2,8 +2,6 @@ answer: |-
   r = rectangle()
   show(r)
 code: |
-  # change this program to draw a rectangle
-  # instead of a circle
   shape = circle()
   show(shape)
 description: |

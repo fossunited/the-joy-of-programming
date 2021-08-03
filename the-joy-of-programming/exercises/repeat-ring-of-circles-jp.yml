@@ -1,0 +1,15 @@
+title: Ring of Circles
+description: |
+  Write a program to draw the following pattern.
+
+  Hint: The pattern has 60 circles with each having a radius of 20.
+
+code: |
+  # your code here
+
+answer: |-
+  shape = circle(x=100, y=0, r=20)
+
+  n = 60
+  s = shape | repeat(n, rotate(360/n))
+  show(s)

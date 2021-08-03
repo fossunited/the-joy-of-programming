@@ -1,0 +1,15 @@
+title: Many Squares
+description: |
+  Write a program to combine multiple squares as shown in the
+  figure below into a single shape and show it.
+
+code: |
+  # your code here
+
+answer: |-
+  r1 = rectangle(w=50, h=50)
+  r2 = rectangle(w=100, h=100)
+  r3 = rectangle(w=150, h=150)
+  r4 = rectangle(w=200, h=200)
+  s = combine([r1, r2, r3, r4])
+  show(s)

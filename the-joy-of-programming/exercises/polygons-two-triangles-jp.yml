@@ -1,0 +1,15 @@
+title: Another Polygon
+description: |
+  Write a program to draw the following shape as a single `polygon`.
+
+  Hint: You just need to specify the two corners in the correct order.
+code: |
+  # your code here
+
+answer: |-
+  p1 = point(x=-100, y=100)
+  p2 = point(x=100, y=100)
+  p3 = point(x=-100, y=-100)
+  p4 = point(x=100, y=-100)
+  s = polygon([p1, p2, p3, p4])
+  show(s)

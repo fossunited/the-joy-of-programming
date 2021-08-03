@@ -1,8 +1,6 @@
 answer: |-
   print("The Joy of Programming")
 code: |
-  # Change this program to print The Joy of Programming
-  # instead of Hello, world!
   print("Hello, World!")
 description: |
   Change the program in the editor below to print the message

@@ -1,0 +1,14 @@
+title: Diamond
+description: |
+  Write a program to draw the following shape using the `polygon` function.
+
+code: |
+  # your code here
+
+answer: |-
+  p1 = point(x=100, y=0)
+  p2 = point(x=0, y=100)
+  p3 = point(x=-100, y=0)
+  p4 = point(x=0, y=-100)
+  s = polygon([p1, p2, p3, p4])
+  show(s)

@@ -1,0 +1,27 @@
+name: grid-ellipses-jp
+title: Grid of Ellipses
+description: |
+  Write a program to draw a grid of shapes as shown in the figure
+  below.
+answer: |-
+  def simple_grid(n):
+      d = 300/n
+      xstart = -150 + d/2
+      ystart = 150 - d/2
+      shapes = []
+
+      for row in range(n):
+          for column in range(n):
+              x = xstart + d*column
+              y = ystart - d*row
+              shape = make_shape(d) | translate(x=x, y=y)
+              shapes.append(shape)
+      return combine(shapes)
+
+  def make_shape(d):
+      return ellipse(w=d, h=d/2) + ellipse(w=d/2, h=d)
+
+  shape = simple_grid(6)
+  show(shape)
+code: |
+  # your code here
