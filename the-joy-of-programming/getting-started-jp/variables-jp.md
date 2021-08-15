@@ -1,7 +1,7 @@
 # Variables
 
 Instead of remembering all the values that we are interested to work with,
-we can give it a name let the computer to remember it.
+we can give it a name let the computer remember it.
 
 ```{.python .joy .example}
 x = 5
@@ -12,7 +12,7 @@ print(x+y)
 In the above program, `x` and `y` are variables holding values `5` and `2`
 respectively.
 
-The variables can take any type of values. In the following example, the
+The variables can take any type of value. In the following example, the
 variable `name` holds a value of type string.
 
 ```{.python .joy .example}
@@ -20,7 +20,7 @@ name = "Joy"
 print(name)
 ```
 
-Notice the different between using a variable and a string. Notice the
+Notice the difference between using a variable and a string. Notice the
 difference by observing the output of the following program.
 
 ```{.python .joy .example}
@@ -42,7 +42,7 @@ print(x)
 ```
 
 In the above example, the variable x starts with value 5 and it gets
-incremented in second line.
+incremented in the second line.
 
 When you see code like `x = x + 1`, it may look very confusing in the
 beginning, but all it means is that compute the expression on the right
@@ -64,8 +64,8 @@ print(y)
 
 ## Printing
 
-Printing values of the variables during the exeuction of program is v
-very common way to undertand how the program is working and identify any
+Printing values of the variables during the execution of a program is v
+very common way to understand how the program is working and identify any
 defects.
 
 The `print` function supports printing multiple values at once.
