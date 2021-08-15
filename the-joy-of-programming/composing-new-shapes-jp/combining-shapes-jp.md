@@ -14,7 +14,7 @@ shape = circle(r=100) + rectangle(w=200, h=200)
 show(shape)
 ```
 
-In the above example, the shape is a compund shape by joining a circle
+In the above example, the shape is a compound shape by joining a circle
 and a rectangle.
 
 Now, let's try to create a donut by adding two circles.
@@ -28,8 +28,8 @@ The above example creates a donut shape using two circles, with the outer
 circle of radius 100 and the inner circle of radius 50, exactly half of
 the outer circle.
 
-However, there is small issue with the above program. If we want to make
-the donut bigger, we need to change the radius of the both the circles
+However, there is a small issue with the above program. If we want to make
+the donut bigger, we need to change the radius of both the circles
 while making sure that the radius inner circle is half of the outer circle.
 
 Wouldn't it be better if change the number just once and the rest of it
@@ -42,7 +42,7 @@ donut = circle(r=r) + circle(r=r/2)
 show(donut)
 ```
 
-The result of this program is exactly same as the previous program, but
+The result of this program is exactly the same as the previous program, but
 now we can change the size of the donut a lot easier. We just need to
 change just one number and everything else already captured in the program.
 
