@@ -1,6 +1,6 @@
 # The For Loop
 
-Suppose you have to do a task a hundrad times in your program. Wouldn't it be too cumbersome to duplicate that code 100 times?
+Suppose you have to do a task a hundred times in your program. Wouldn't it be too cumbersome to duplicate that code 100 times?
 
 Every programming language will have a way to repeat things. In Python, it is done using a for loop.
 
@@ -23,7 +23,7 @@ to the right by adding spaces at the beginning of the line). Just like
 writing a function, when writing a for loop, the code that is part of
 the loop is identified by the indentation.
 
-You can understand that the line `    print(n)`  is part of the loop, but
+You can understand that the line `print(n)`  is part of the loop, but
 the line `print("done")` is outside the loop.
 
 Let's try to iterate over a list of names.
@@ -62,7 +62,7 @@ The funciton `range(a, b)` gives numbers from `a`, `a+1`,..., `b-1`.
 ## Looping Patterns
 
 We've seen how to use a for loop, but let's review various looping
-patterns to get a sense of how loops are used in difference scenarios.
+patterns to get a sense of how loops are used in different scenarios.
 Some of these we have already seen above.
 
 ### Iterate over a list of values
@@ -98,10 +98,10 @@ for i in range(5):
     n = n + 10
 ```
 
-The line `n = n + 10` may look a little stange if you have never seen
+The line `n = n + 10` may look a little strange if you have never seen
 something like that before. It just means that, take the current value
 of `n`, add 10 to it and assign it back to variable `n`. So, that line
-of code increment the value of n by 10.
+of code increments the value of n by 10.
 
 Initializing a variable before the loop and updating it in every iteration
 of the loop is one of the common patterns used with loops.
