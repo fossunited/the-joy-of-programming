@@ -1,7 +1,7 @@
 # Repeat
 
-Repeat is a higer order transformation that takes a transformation and
-applies it repeatedly to a shape and comnbines all the resulting shapes.
+Repeat is a higher order transformation that takes a transformation and
+applies it repeatedly to a shape and combines all the resulting shapes.
 
 The following example repeatedly translates a circle 5 times.
 
