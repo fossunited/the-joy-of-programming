@@ -39,7 +39,7 @@ show(k1, k2, k3)
 
 ## Polygon
 
-As you could have seen in the previous example, it is get cumbersome
+As you could have seen in the previous example, it is getting cumbersome
 to draw polygons using just lines. The `polygon` function is a better
 way to create polygons.
 
