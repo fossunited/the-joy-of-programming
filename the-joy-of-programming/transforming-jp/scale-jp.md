@@ -41,7 +41,7 @@ We can also apply negative scaling to flip a shape.
 
 Let's try to make a mirror image. The mirror image flips the image vertically.
 To flip vertically, the stuff on the right need to move to the left and vice versa.
-Which means we need to change the x-coordinates. It may sound counter intutive,
+Which means we need to change the x-coordinates. It may sound counterintuitive,
 but you need to `scale(x=-1)` to flip it vertically.
 
 Let's start with a shape.
