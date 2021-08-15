@@ -5,8 +5,8 @@ available in the system. We've drawn new shapes like donut, eye etc
 by combining simple shapes. While that was fun, it would quickly become
 cumbersome if we try to draw these shapes multiple times.
 
-Wouldn't it be nice if we can explain to computer how to draw a new
-shape and it rememebers it forever? In this lesson we are going to see
+Wouldn't it be nice if we can explain to the computer how to draw a new
+shape and it remembers it forever? In this lesson we are going to see
 how to use functions to achieve exactly this!
 
 ## Functions
@@ -24,20 +24,20 @@ shape = circle(r=50)
 show(shape)
 ```
 
-Function are called by passing inputs to it, called arguments. Some
-functions take a single aregument, some take more than one and some
+Function is called by passing inputs to it, called arguments. Some
+functions take a single argument, some take more than one and some
 don't take any arguments at all.
 
 The arguments to a function can be passed either by position (`show(shape)`)
 or by name (`circle(r=50)`). Some functions accept arguments only
-by name. We'll learn more about that in the latter lessons.
+by name. We'll learn more about that in the later lessons.
 
 ## Creating Functions
 
 We can create our own functions. Once we create a new function, it can be
 used just like the built-in functions.
 
-Lets start with creating a function `dot` to create a dot at specified position.
+Lets start with creating a function `dot` to create a dot at the specified position.
 
 ```{.python .joy .example}
 def dot(x, y):
@@ -64,7 +64,7 @@ def dot(x, y):
     # create a circle filled with black, having center (x,y) and radius 5
     c = circle(x=x, y=y, r=5, fill="black")
 
-    # return the shape c to whover calls this function
+    # return the shape c to whoever calls this function
     return c
 ```
 
