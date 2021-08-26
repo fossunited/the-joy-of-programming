@@ -9,19 +9,19 @@ Let's write our first program in Python to display that message.
 print("Hello, world!")
 ```
 
-Click on the run button to execute the program. You should be able see the output below after you that.
+Click on the run button to execute the program. You should be able to see the output below after you that.
 
 The `print` is a function that takes a value as input and displays it on the screen. We've passed a text value `"Hello, world!"` as input to the `print` function.
 
-The text values are called _strings_ in Python. Strings are enclosed either in double quotes of single quotes.
+The text values are called _strings_ in Python. Strings are enclosed either in double quotes or single quotes.
 
 If you don't put quotes, then Python will complain. For example `print(hello)` will not work, but `print("hello")` will.
 
 ## Comments
 
-While we write programs for the computer to perform some action, it is also equallly important to pay attention to make the program easy to understand for other people or even yourself.
+While we write programs for the computer to perform some action, it is also equally important to pay attention to make the program easy to understand for other people or even yourself.
 
-Every programming language provides a way to write _comments_ in the code. Comments are notes that we write in the program, which are ignored by the computer, but they help people to understand what the program does or why the program was writen in that particular way.
+Every programming language provides a way to write _comments_ in the code. Comments are notes that we write in the program, which are ignored by the computer, but they help people to understand what the program does or why the program was written in that particular way.
 
 In Python, comments start with `#` character. Everything from `#`  to the end of the line is considered as comment and is ignored by the computer.
 
@@ -50,7 +50,7 @@ show(c)
 
 When you run the program you'll see a circle at the center of a canvas.
 
-The function `circle` is provide by the `Joy` library. It has many other functions for various shapes and doing some operations on them, which you'll see in the upcoming lessons.
+The function `circle` is provided by the `Joy` library. It has many other functions for various shapes and doing some operations on them, which you'll see in the upcoming lessons.
 
 {{ Exercise("draw-rectangle-jp") }}
 

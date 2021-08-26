@@ -10,7 +10,7 @@ to draw various patterns on the screen. It is a lot fun to learn programming
 this way than just printing some numbers on the screen. It is
 really amazing to see your ideas come to life in front of your eyes.
 
-This course uses Python programming language, but only small subset
+This course uses Python programming language, but only a small subset of
 the language features. The goal of this course is not to make the
 students great at Python, but to provide them with tools of thinking
 that can be applied to programming, irrespective of the programming language.
@@ -20,9 +20,9 @@ to challenge you, amuse you and surprise you.
 
 ## Prerequisites
 
-This course assume no prior programming experiece.
+This course assumes no prior programming experience.
 
-However, it is assumed that you are reasonbly good at doing simple math.
+However, it is assumed that you are reasonably good at doing simple math.
 
 To tell the computer where to draw a shape and how big, you also need
 to know a bit of coordinate geometry. Don't worry if you don't know much,

@@ -7,7 +7,7 @@ canvas.
 
 ## Simple Circle
 
-We'll start with drawing a circle. This involves two steps, creating a
+We'll start by drawing a circle. This involves two steps, creating a
 circle and showing it.
 
 ```{.python .joy .example #one-circle}
@@ -15,7 +15,7 @@ c = circle()
 show(c)
 ```
 
-The first line creates a circle shape and the secone line shows it.
+The first line creates a circle shape and the second line shows it.
 
 Just like the `print` function is used to display numbers and strings,
 the `show` function is used to display shapes.
@@ -45,12 +45,12 @@ Try making the circle bigger by changing the value of parameter `r`.
     and by position (like in `print(1, 2, 3)`).
 
     It is too early for us to get into those details. For now, just understand
-    that both these ways are acceptible.
+    that both these ways are acceptable.
 
 ## More Circles
 
 We can also create more than one circle. The following example draws
-two conentric circles with radius `50` and `100`.
+two concentric circles with radius `50` and `100`.
 
 ```{.python .joy .example #two-circles}
 c1 = circle(r=50)

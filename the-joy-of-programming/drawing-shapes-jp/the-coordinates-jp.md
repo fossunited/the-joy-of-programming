@@ -10,7 +10,7 @@ z = Line()
 show(z)
 ```
 
-We can also specify the `start` and `end` points when creating a line. For that we first need to creat points. The following example creates two points `p1` and `p2` and draws a line between them.
+We can also specify the `start` and `end` points when creating a line. For that we first need to create points. The following example creates two points `p1` and `p2` and draws a line between them.
 
 ```{.python .joy .example #circle-with-center}
 p1 = Point(x=0, y=0)
@@ -57,12 +57,12 @@ show(s1, s2, s3)
 ```
 
 As you can notice, we've created all the points first and the created the
-shapes. While it is possible to specify the points direcly when creating
+shapes. While it is possible to specify the points directly when creating
 the line, organizing code like this makes the program to easy to understand
 and make changes.
 
-The empty line seperating the points and shapes also very important. It
-helps to see that the code has two part. The first part we are defining
+The empty line separating the points and shapes is also very important. It
+helps to see that the code has two parts. The first part we are defining
 the points and in the second part we are drawing the shapes. Remember
 that clarity of the program is as important as correctness.
 

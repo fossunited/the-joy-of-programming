@@ -41,7 +41,7 @@ x, y = 0, 0
 r = 100
 n = 10
 
-# the difference in the radius of two consequetive circles
+# the difference in the radius of two consecutive circles
 step = r/n
 
 # we start with drawing the outer circle first and then keep on drawing
@@ -52,11 +52,11 @@ for i in range(n):
     r = r-step
 ```
 
-As you can see that draws one concentric circle. Wouldn't it be good it turn that into a function so that we can use it more than once?
+As you can see that draws one concentric circle. Wouldn't it be good it turns that into a function so that we can use it more than once?
 
 ```{.python .joy .example}
 def concentric_circles(x, y, r, n):
-    # we start with drawing the outer circle first
+    # we start by drawing the outer circle first
     # and start moving inside, drawing circles one by one
     step = r/n
     for i in range(n):
@@ -80,9 +80,9 @@ concentric_circles(-w/2, -h/2, r, n)
 
 One thing important to notice here is that the body of the `concentric_circles` function is indented by four spaces. The body of the function contains a _for loop_ and it's body is further indented by four spaces. So, there are two levels of indentation for the code inside the for loop.
 
-Try playing with changing the values of `r` and `n` and see what you get. You can try removing the concentric circles in the center. You'll be surprised with how many wonerful patterns that you can create.
+Try playing with changing the values of `r` and `n` and see what you get. You can try removing the concentric circles in the center. You'll be surprised with how many wonderful patterns that you can create.
 
-As you can see we can start with simple concepts like circle, build more concepts like concentric circles using the simple concepts and use all of these together to make non-trivial skeches.
+As you can see we can start with simple concepts like the circle, build more concepts like concentric circles using the simple concepts and use all of these together to make non-trivial sketches.
 
 This is the basic pattern that is followed in software development. If you really want to understand how complex software is made, pay attention to how to solve larger problems by writing simple functions and combining them. Try to use this approach whenever you are solving exercises. It not only makes the problem easy to solve, but also makes it lot more fun.
 

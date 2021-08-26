@@ -4,7 +4,7 @@ So far, we've drawn different shapes, but all of them were just
 _black_ and _white_. Wouldn't it be fun to add some colors to our sketches?
 
 In this lesson we'll learn how to specify the fill color, the stroke color
-and the stoke width.
+and the stroke width.
 
 ## The Fill Color
 
@@ -24,7 +24,7 @@ _gray_, _red_, _blue_, _green_, _yellow_, _maroon_, _purple_, _pink_ and
 [many more](https://en.wikipedia.org/wiki/Web_colors).
 
 We can also specify the fill as `"none"`, if we don't want to fill
-anything, which the default behavior.
+anything, which is the default behaviour.
 
 One important thing to remember when using `fill` is that the order of
 drawing shapes matter.
@@ -86,7 +86,7 @@ show(c1, c2, c3, c4, c5)
 ## Web Colors
 
 The standard colors are very often not sufficient for creative minds.
-People who is need finer control over the colors specify the color
+People who need finer control over the colors specify the color
 using their RGB values standing for the red, the green and the blue
 components of a color. A common way to specify that is using a
 hexadecimal format, like `#138808`. It has 6 characters after the `#`
@@ -94,9 +94,9 @@ symbol, 2 characters each for red, green and blue respectively.
 
 Don't worry about how to create colors using that. We usually don't. We
 just pick a color code by [searching for color picker](https://duckduckgo.com/?q=color+picker)
-or from a one of the many websites on the web.
+or from one of the many websites on the web.
 
-Now that we know how grab wonderful colors from the web, let's see how to
+Now that we know how to grab wonderful colors from the web, let's see how to
 use them in our programs. How about creating a circle filled with _PeachPuff_ with a
 _Tomato_ outline? Yes, _PeachPuff_ and _Tomato_ are the names of two standard colors.
 
@@ -149,7 +149,7 @@ show(r1, r2, r3)
 ### More Flags
 
 Can you search the web for flags of various countries and create sketches
-for them? Their wikipedia pages usually have the color codes.
+for them? Their Wikipedia pages usually have the color codes.
 
 You could try creating the flag of [Russia][] or [France][] or even [Japan][]. Why stop at three? Can do you 10 flags?
 

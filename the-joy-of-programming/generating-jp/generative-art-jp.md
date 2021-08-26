@@ -1,10 +1,10 @@
 # Generative Art
 
-Just like how too much order is boring, too much randomness is also not very interesting. Things get really interesting when we create things that in good order, with a pinch of randomness.
+Just like how too much order is boring, too much randomness is also not very interesting. Things get really interesting when we create things that are in good order, with a pinch of randomness.
 
 ## Random Bars
 
-Instead of creating lines completely in random, lets create vertical lines of random height starting from the bottom of the canvas.
+Instead of creating lines completely random, let's create vertical lines of random height starting from the bottom of the canvas.
 
 Notice that we are drawing lines just like in one of the exercises in the previous lesson, but only the height is random and everything else is fixed.
 
@@ -18,9 +18,9 @@ for x in range(-150, 150):
     show(b)
 ```
 
-The `bar` function create a new veritical line at speifcied height and x location. We are using that to draw 300 bars one for each x coordinate, with random height.
+The `bar` function creates a new vertical line at a specified height and x location. We are using that to draw 300 bars one for each x coordinate, with random height.
 
-While, the previous example is draw the bars at random, it doesn't create a new shape that could be used elsewhere, like applying a transformation.
+While, the previous example draws the bars at random, it doesn't create a new shape that could be used elsewhere, like applying a transformation.
 
 In the following example, we'll see how to combine all the bars into a single shape. For this we are going to create a list of shapes first and then combine them using the `combine` function.
 
@@ -66,7 +66,7 @@ The `random_concentric_circles` function takes two arguments `n`, the number of 
 
 It is a lot of fun to make a grid of shapes, each slightly different.
 
-Lets start with creating a 4x4 grid of circles.
+Let's start with creating a 4x4 grid of circles.
 
 
 ```{.python .joy .example}
@@ -82,7 +82,7 @@ for i in range(n):
         show(c)
 ```
 
-This may look a bit tricky. We are using a nested loop here. The i goes over the rows and `j` goes over the columns. Each (i, j) represents once cell and for cell we are comuting the `x` and `y` coordinates of the center.
+This may look a bit tricky. We are using a nested loop here. The i goes over the rows and `j` goes over the columns. Each (i, j) represents once cell and for cell we are computing the `x` and `y` coordinates of the center.
 
 Let's convert that into a useful function.
 
@@ -104,7 +104,7 @@ shape = simple_grid(4)
 show(shape)
 ```
 
-This is neat, but that only works for circles. What if we want draw a grid of ellipses or a new shape? Let's see how to generalize the `simple_grid` to support drawing any shape in a grid.
+This is neat, but that only works for circles. What if we want to draw a grid of ellipses or a new shape? Let's see how to generalize the `simple_grid` to support drawing any shape in a grid.
 
 For doing this, we need to make the `simple_grid` take a function `shape_maker` as an argument which when given center and the `d`, the width or height of the cell as argument, creates the shape. The `simple_grid` function call that function multiple times in the loop to create that shape.
 

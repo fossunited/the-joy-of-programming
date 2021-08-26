@@ -2,9 +2,9 @@
 
 All the sketches that we have created so far are quite structured. But too much order like that gets boring. They feel a bit artificial and we don't get a natural feel.
 
-Most things in the nature has an element of randomness to it. Every branch of a tree doesn't have a fixed number of leaves. That variation, that randomness is pleasing.
+Most things in nature have an element of randomness to them. Every branch of a tree doesn't have a fixed number of leaves. That variation, that randomness is pleasing.
 
-In this lesson, we'll see how to generate random numbers and usem to create shapes of random size and position.
+In this lesson, we'll see how to generate random numbers and use to create shapes of random size and position.
 
 ## Random Numbers
 
@@ -24,7 +24,7 @@ print(random(10))
 print(random(5, 10))
 ```
 
-You may have a run it multiple times to get a sense of the spread of the values.
+You may have run it multiple times to get a sense of the spread of the values.
 
 Sometimes, we want to work with just integers and we could use the `round` or the `int` function to convert the floating-point number to an integer.
 
@@ -113,7 +113,7 @@ c2 = circle(x=50, y=0, r=100, fill=random_color())
 show(c1, c2)
 ```
 
-Random colors with transparency is an interesting technique and we'll use that a lot in the comming lessons.
+Random colors with transparency is an interesting technique and we'll use that a lot in the coming lessons.
 
 ## Exercises
 
